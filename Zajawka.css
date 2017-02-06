@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+.zajawka-zaj{
+    height: 100vh;
+    width: 100%;
+    background-image: url(zajawka.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.nazwa-zaj{
+    font-family: 'Roboto',sans-serif;
+    font-size:200px;
+    float:left;
+    color: green;
+    margin-top: 5px;
+    margin-left: 600px;
+    margin-bottom: 0px;
+}
+.opis-zaj{
+    font-family: 'Roboto',sans-serif;
+    color: green;
+    margin-top: -20px;
+    margin-left:700px;
+
+
+}
