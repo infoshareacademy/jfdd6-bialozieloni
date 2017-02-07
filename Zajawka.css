@@ -45,7 +45,11 @@
     text-decoration: none;
     font-family: 'Roboto',sans-serif;
     color: white;
+    font-weight: bold;
     font-size: 30px;
     padding: 10px;
     background-color: #85bb65;
+    border-radius:5px;
+    margin-left: 900px;
+    line-height: 300px;
 }
