@@ -11,36 +11,35 @@ html, body {
 .nav {
     width: 100%;
     position: fixed;
-    background: white;
+    background: #85bb65;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.nav-logo {
-    fill: green;
-    width: 3rem;
-    height: 3rem;
-    margin: 1rem 0;
-    font-size: 3rem;
-}
-
-.nav-logo:hover {
-    fill: black;
-}
-
-/*.nav-logo-name {
-    margin: 0;
-    color: green;
+.nav-logo-all {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-size: 3rem;
     white-space: nowrap;
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
     text-decoration: none;
-*/
+    color: green;
+}
 
-.nav-logo-name:hover {
-    color: black;
+.nav-logo {
+    fill: green;;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 0;
+}
+
+.nav-logo-all:hover,
+.nav-logo-all:hover .nav-logo {
+    color: white;
+    fill: white;
 }
 
 .nav-list {
@@ -58,11 +57,11 @@ html, body {
 
 .nav-link {
     text-decoration: none;
-    color: green;
+    color: green;;
 }
 
 .nav-link:hover{
-    color: black;
+    color: white;
 }
 
 .a {
