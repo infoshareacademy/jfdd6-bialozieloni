@@ -178,7 +178,7 @@ html, body {
 
 .form {
     display: flex;
-    background-color: rgba(255, 251, 255, 0.94);
+    background-color: rgba(255, 255, 255);
     width: 100%;
     height: 100vh;
     align-items: center;
@@ -229,11 +229,13 @@ img {
     margin: 0;
     text-transform: uppercase;
     padding-top: 20px;
+
 }
 
 .div2 p {
     text-align: justify;
 }
+
 .div2 .newsletter input {
 
     margin: 20px;
@@ -241,10 +243,7 @@ img {
     height: 40px;
     border-radius: 5px 5px 5px 5px;
     font-size: 1.5rem;
-
 }
-
-
 
 button[name="submit"] {
 
@@ -254,8 +253,18 @@ button[name="submit"] {
     margin-left: 20px;
 }
 
+input[type="email"]:valid {
+    background-color: green;
+}
+
+
+input[type="email"]:invalid {
+ background-color: red;
+}
+
 .zgoda {
     margin-left: 20px;
+
 }
 
 .container {
