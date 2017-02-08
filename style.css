@@ -92,6 +92,7 @@ html, body {
     height: auto;
     margin-right: 0px;
     padding: 0px;
+    fill: green;
 }
 .nazwa-zaj{
     font-family: 'Roboto',sans-serif;
