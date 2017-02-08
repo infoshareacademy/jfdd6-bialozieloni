@@ -82,8 +82,8 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 250px;
-    padding-left: 250px;
+    padding-top: 300px;
+    padding-left: 360px;
 
 
 }
@@ -95,7 +95,7 @@ html, body {
     fill: green;
 }
 .nazwa-zaj{
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Raleway',sans-serif;
     font-size:150px;
     float:left;
     color: green;
@@ -106,6 +106,7 @@ html, body {
 .opis-zaj{
     font-family: 'Roboto',sans-serif;
     color: green;
+    font-size: 30px;
     margin-top: 0px;
     margin-left:700px;
     padding-top: 10px;
