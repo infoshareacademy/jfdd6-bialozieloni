@@ -29,6 +29,7 @@ html, body {
     width: 200px;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
 .func-1-par, .func-2-par, .func-3-par, .func-4-par {
