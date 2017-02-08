@@ -6,45 +6,98 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>GWCalc</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,900&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="nav">
-        poziome menu, kierujące do poszczególnych sekcji
-        menu przesuwa się przy scrollowaniu (jest stale widoczne)
-        logo zgodne z bandingiem firmy
-        kolory zgodne z brandingiem firmy
+        <a class="nav-logo-all" href="#">
+            <svg class="nav-logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M24 3.055l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm-16.69 6.477l-3.282-3.239 1.41-1.418 3.298 3.249-1.426 1.408zm15.49 3.287l1.2 6.001-6-1.221 1.716-1.708-2.13-2.133 1.411-1.408 2.136 2.129 1.667-1.66zm1.2 8.181v2h-24v-22h2v20h22z"/>
+            </svg>
+            GW Calc
+        </a>
+        <ul class="nav-list">
+            <li class="nav-list-item"><a class="nav-link" href="#functions">GW Calc</a></li>
+            <li class="nav-list-item"><a class="nav-link" href="#form">Formularz</a></li>
+            <li class="nav-list-item"><a class="nav-link" href="#team">O nas</a></li>
+            <li class="nav-list-item"><a class="nav-link" href="#functions2">Więcej</a></li>
+        </ul>
     </nav>
     <header class="container">
-        duże zdjęcie na całą szerokość strony
-        jeden duży tekstem na zdjęciu
-        dwa zdania opisu
-        odniesienie do formularza (jeśli istnieje)
+        <div class="zajawka-zaj">
+
+            <div class="logo"><svg class="obrazek" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 3.055l-6 1.221 1.716 1.708-5.351 5.358-3.001-3.002-7.336 7.242 1.41 1.418 5.922-5.834 2.991 2.993 6.781-6.762 1.667 1.66 1.201-6.002zm-16.69 6.477l-3.282-3.239 1.41-1.418 3.298 3.249-1.426 1.408zm15.49 3.287l1.2 6.001-6-1.221 1.716-1.708-2.13-2.133 1.411-1.408 2.136 2.129 1.667-1.66zm1.2 8.181v2h-24v-22h2v20h22z"/></svg><h2 class="nazwa-zaj">GW calc</h2></div>
+
+            <p class="opis-zaj">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque iaculis ipsum augue, in ullamcorper sapien fringilla eu.</p>
+
+            <a class="link" href="">Zarejestruj się</a>
     </header>
-    <section class="functions">
-        4 ikony
-        dla każdej ikony po jednym haśle mówiącym o funkcjonalnościach przyszłej aplikacji
-        ułożone w poziomie (obok siebie)
+    <section class="functions" id="functions">
+        <div class="func-1-main">
+            <div class="func-1">
+                <img class="func-1-icon" src="ic_language_black_48px%20(2).svg" alt="">
+                <h3 class="func-1-title">Inwestuj</h3>
+                <p class="func-1-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
+        </div>
+
+        <div class="func-2-main">
+            <div class="func-2">
+                <img class="func-2-icon" src="ic_language_black_48px%20(2).svg" alt="">
+                <h3 class="func-2-title">Inwestuj</h3>
+                <p class="func-2-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
+        </div>
+
+        <div class="func-3-main">
+            <div class="func-3">
+                <img class="func-3-icon" src="ic_language_black_48px%20(2).svg" alt="">
+                <h3 class="func-3-title">Inwestuj</h3>
+                <p class="func-3-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
+        </div>
+
+        <div class="func-4-main">
+            <div class="func-4">
+                <img class="func-4-icon" src="ic_language_black_48px%20(2).svg" alt="">
+                <h3 class="func-4-title">Inwestuj</h3>
+                <p class="func-4-par">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
+        </div>
     </section>
-    <section class="form">
-        formularz do podania maila
-        informacja, że wysłany zostanie tylko jeden mail z informacją o premierze
-        zapewnienie o bezpieczeństwie danych
+
+
+
+
+    <section class="form" id="form">
+
+            <div class="div1">
+                <img src="newsletter.jpg" alt="newsletter">
+            </div>
+
+            <div class="div2">
+                <form class="newsletter">
+                    <div><input type="text" name="firstname" placeholder="Twoje imię"></div>
+                    <div><input type="text" name="lastname" placeholder="Twoje nazwisko"></div>
+                    <div><input type="email" name="email" placeholder="Twój adres e-mail"></div>
+                </form>
+                <p class="zgoda"><input type="checkbox" name="zgoda" required> Wyrażam zgodę na przetwarzanie moich danych osobowych w celach marketingowych przez GWCalc S.A. z siedzibą w Gdańsku ul. Łąkowa 39/44 i na powierzenie danych w celu przetwarzania podmiotom współpracującym z GWCalc S.A., w zakresie działalności marketingowej oraz na otrzymywanie na podany adres e-mail informacji handlowych. Podanie danych jest dobrowolne. Użytkownikom przysługuje prawo dostępu do swoich danych i ich poprawiania </p>
+                <button name="submit">Zapisz mnie</button>
+            </div>
+
+
+        <p class="info">Informujemy, że zostanie wysłany tylko jeden e-mail z informacją o premierze naszego produktu</p>
+
+
     </section>
-    <section class="team">
-        wszyscy członkowie zespołu
-        imię i nazwisko
-        linki do profili w social media
-        linki do stron domowych (o mnie)
+
+
+
+
+
+    <section class="team" id="team">
     </section>
-    <section class="functions2">
-        dłuższa lista fukcjonalności (7-8)
-        bardziej szczegółowe opisy każdej z fukcjonalności
-        ułożone w 2 kolumny
-        ikonka/zdjęcie dla każdej funkcjonalności
+    <section class="functions2" id="functions2">
     </section>
     <footer class="footer">
-        footer
     </footer>
 </body>
 </html>

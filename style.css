@@ -2,48 +2,207 @@
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-}
-
-
 html, body {
     font-size: 10px;
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
+/*sekcja Roberta*/
+.nav {
+    width: 100%;
+    position: fixed;
+    background: #85bb65;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 9;
+}
+
+.nav-logo-all {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 3rem;
+    white-space: nowrap;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    color: green;
+}
+
+.nav-logo {
+    fill: green;;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 0;
+}
+
+.nav-logo-all:hover,
+.nav-logo-all:hover .nav-logo {
+    color: white;
+    fill: white;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3rem;
+    width: 100%;
+    margin: 1rem;
+}
+
+.nav-list-item {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: green;;
+}
+
+.nav-link:hover{
+    color: white;
+}
+/* koniec sekcji Roberta*/
+
+/*sekcja Janka*/
+
+.zajawka-zaj{
+    height: 100vh;
+    width: 100%;
+    background-image: url(zajawka.jpg);
+    background-size: cover;
+
+
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 250px;
+    padding-left: 250px;
+
+
+}
+.obrazek{
+    width: 200px;
+    height: auto;
+    margin-right: 0px;
+    padding: 0px;
+    fill: green;
+}
+.nazwa-zaj{
+    font-family: 'Roboto',sans-serif;
+    font-size:150px;
+    float:left;
+    color: green;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+.opis-zaj{
+    font-family: 'Roboto',sans-serif;
+    color: green;
+    margin-top: 0px;
+    margin-left:700px;
+    padding-top: 10px;
+}
+.link{
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    background-color: #85bb65;
+    border-radius:5px;
+    margin-left: 900px;
+    line-height: 300px;
+}
+/*koniec sekcji Janka*/
+
+/*sekcja Bartka*/
+.functions {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.func-1-main, .func-2-main, .func-3-main, .func-4-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin: auto;
+}
+
+.func-1, .func-2, .func-3, .func-4 {
+    flex: 1;
+    height: 200px;
+    width: 200px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.func-1-par, .func-2-par, .func-3-par, .func-4-par {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.func-1-title, .func-2-title, .func-3-title, .func-4-title {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.func-1-icon, .func-2-icon, .func-3-icon, .func-4-icon {
+    width: 90%;
+    height: auto;
+}
+
+/*koniec sekcji Bartka*/
+
+/*Sekcja Tomka */
+
+
+
 .form {
     display: flex;
-    background-color: white;
-    flex-direction: row;
+    background-color: rgba(255, 251, 255, 0.94);
     width: 100%;
     height: 100vh;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
-.div0 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 
-}
 .div1 {
-
-    width: 100%;
-    height: 100vh;
+    display: flex;
+    width: 50%;
+    height: 50vh;
+    margin-bottom: 10vh;
 }
 
+img {
+    max-width: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
 
 .div2 {
-
-    width: 100%;
-    height: 100vh;
-
+    width: 50%;
+    height: 50vh;
+    margin-bottom: 10vh;
 }
-
-
 
 
 .div1 {
@@ -60,8 +219,9 @@ html, body {
     position: absolute;
     bottom: 0;
     font-size: 2rem;
-    color: #267d1b;
-    background-color: black;
+    font-weight: 300;
+    color: green;
+    background-color: #85bb65;
     width: 100%;
     height: 60px;
     text-align: center;
@@ -79,9 +239,27 @@ html, body {
     width: 300px;
     height: 40px;
     border-radius: 5px 5px 5px 5px;
+    font-size: 1.5rem;
 
 }
 
 
 
+button[name="submit"] {
 
+    width: 120px;
+    height: 30px;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+.zgoda {
+    margin-left: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+/*koniec sekcji Tomka*/
