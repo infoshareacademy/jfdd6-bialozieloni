@@ -286,3 +286,52 @@ input:invalid {
 }
 
 /*koniec sekcji Tomka*/
+
+/*sekcja Roberta*/
+.team {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.team-member {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background: #85bb65;
+    padding-top: 20px;
+}
+
+.team-member-photo{
+    border: 2px solid green;
+    border-radius: 50%;
+}
+
+.team-member-link {
+    color: green;
+    text-decoration: none;
+}
+
+.team-member-link:hover .team-member-name {
+    color: white;
+}
+
+.team-member-icon {
+    width: 5rem;
+    height: 5rem;
+}
+
+.team-member-linkedin {
+    fill: #0077b5;
+}
+
+.team-member-github:hover, .team-member-linkedin:hover {
+    fill: white;
+}
+
+/*koniec sekcji Roberta*/
