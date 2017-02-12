@@ -310,6 +310,8 @@ input:invalid {
 .team-member-photo{
     border: 2px solid green;
     border-radius: 50%;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 .team-member-link {
