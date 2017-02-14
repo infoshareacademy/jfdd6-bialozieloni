@@ -1,0 +1,17 @@
+.col-1  {
+    max-width: 50%;
+    height: 60vh;
+    float: left;
+    background-color: green;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
+
+.col-2 {
+    max-width: 50%;
+    height: 60vh;
+    float: left;
+    background-color: blue;
+    margin-bottom: 20vh;
+    margin-top: 20vh;
+}
