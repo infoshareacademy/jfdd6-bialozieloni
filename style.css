@@ -136,7 +136,10 @@ html, body {
     display: flex;
 }
 
-.func-1-main, .func-2-main, .func-3-main, .func-4-main {
+.func-1-main,
+.func-2-main,
+.func-3-main,
+.func-4-main {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -146,7 +149,10 @@ html, body {
     text-align: center;
 }
 
-.func-1, .func-2, .func-3, .func-4 {
+.func-1,
+.func-2,
+.func-3,
+.func-4 {
     flex: 1;
     height: 200px;
     width: 200px;
@@ -154,7 +160,10 @@ html, body {
     justify-content: center;
 }
 
-.func-1-par, .func-2-par, .func-3-par, .func-4-par {
+.func-1-par,
+.func-2-par,
+.func-3-par,
+.func-4-par {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -162,7 +171,10 @@ html, body {
     text-align: center;
 }
 
-.func-1-title, .func-2-title, .func-3-title, .func-4-title {
+.func-1-title,
+.func-2-title,
+.func-3-title,
+.func-4-title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -170,7 +182,10 @@ html, body {
     font-size: 3rem;
 }
 
-.func-1-icon, .func-2-icon, .func-3-icon, .func-4-icon {
+.func-1-icon,
+.func-2-icon,
+.func-3-icon,
+.func-4-icon {
     width: 70%;
     height: auto;
 }
