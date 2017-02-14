@@ -72,8 +72,9 @@ html, body {
 .zajawka-zaj{
     height: 100vh;
     width: 100%;
-    background-image: url(zajawka.jpg);
+    background-image: url(zajawka2.jpg);
     background-size: cover;
+    opacity: 0.9;
 
 
 }
@@ -83,7 +84,8 @@ html, body {
     flex-direction: row;
     justify-content: center;
     padding-top: 300px;
-    padding-left: 360px;
+    padding-left: 0px;
+
 
 
 }
@@ -108,20 +110,23 @@ html, body {
     color: green;
     font-size: 30px;
     margin-top: 0px;
-    margin-left:700px;
+    margin-left:450px;
     padding-top: 10px;
 }
 .link{
     text-decoration: none;
     font-family: 'Roboto',sans-serif;
-    color: white;
+    color: green;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     padding: 10px;
     background-color: #85bb65;
     border-radius:5px;
-    margin-left: 900px;
-    line-height: 300px;
+    margin-left: 800px;
+    line-height: 150px;
+}
+.link:hover{
+    color: white;
 }
 /*koniec sekcji Janka*/
 
@@ -179,7 +184,7 @@ html, body {
 
 .form {
     display: flex;
-    background-color: rgba(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100vh;
     align-items: center;
@@ -254,13 +259,14 @@ button[name="submit"] {
     margin-left: 20px;
 }
 
-input[type="email"]:valid {
-    background-color: green;
+input:valid{
+    border: 2px solid green;
 }
 
 
-input[type="email"]:invalid {
- background-color: red;
+input:invalid {
+
+    border: 2px solid red;
 }
 
 .zgoda {
@@ -273,4 +279,72 @@ input[type="email"]:invalid {
     height: 100vh;
 }
 
+#ptaszek {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+
 /*koniec sekcji Tomka*/
+
+/*sekcja Roberta*/
+.team {
+    width: 100%;
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+.team-title {
+    text-align: center;
+    color: green;
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.team-member {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background: #85bb65;
+    padding-top: 20px;
+}
+
+.team-member-photo{
+    border: 2px solid green;
+    border-radius: 50%;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.team-member-link {
+    color: green;
+    text-decoration: none;
+}
+
+.team-member-link:hover .team-member-name {
+    color: white;
+}
+
+.team-member-icon {
+    width: 5rem;
+    height: 5rem;
+}
+
+.team-member-linkedin {
+    fill: #0077b5;
+}
+
+.team-member-github:hover, .team-member-linkedin:hover {
+    fill: white;
+}
+
+/*koniec sekcji Roberta*/
