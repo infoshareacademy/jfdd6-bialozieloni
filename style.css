@@ -1,69 +1,68 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-    font-size: 10px;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 /*sekcja Roberta*/
 .nav {
-    width: 100%;
-    position: fixed;
-    background: #85bb65;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 9;
+  width: 100%;
+  position: fixed;
+  background: #85bb65;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 9;
 }
 
 .nav-logo-all {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 3rem;
-    white-space: nowrap;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
-    text-decoration: none;
-    color: green;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font: 900 3rem 'Raleway', sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  color: green;
 }
 
 .nav-logo {
-    fill: green;;
-    width: 3rem;
-    height: 3rem;
-    margin: 1rem 0;
+  fill: green;;
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem 0;
 }
 
 .nav-logo-all:hover,
-.nav-logo-all:hover .nav-logo {
-    color: white;
-    fill: white;
+.nav-logo-all:hover
+.nav-logo {
+  color: white;
+  fill: white;
 }
 
 .nav-list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 3rem;
-    width: 100%;
-    margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3rem;
+  width: 100%;
+  margin: 1rem;
 }
 
 .nav-list-item {
-    list-style: none;
+  list-style: none;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: green;;
+  text-decoration: none;
+  color: green;;
 }
 
 .nav-link:hover{
-    color: white;
+  color: white;
 }
 /* koniec sekcji Roberta*/
 
@@ -304,62 +303,64 @@ input:invalid {
 
 /*sekcja Roberta*/
 .team {
-    width: 100%;
-    height: 100vh;
-    padding-top: 5rem;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5rem;
 }
 
 .team-title {
-    text-align: center;
-    color: green;
-    font-size: 10rem;
-    font-weight: 900;
+  text-align: center;
+  color: green;
+  font-weight: 900;
+  font-size: 10rem;
 }
 
 .team-members {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .team-member {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    background: #85bb65;
-    padding-top: 20px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background: #85bb65;
+  padding-top: 20px;
 }
 
 .team-member-photo{
-    border: 2px solid green;
-    border-radius: 50%;
-    max-width: 250px;
-    max-height: 250px;
+  border: 2px solid green;
+  border-radius: 50%;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .team-member-link {
-    color: green;
-    text-decoration: none;
+  color: green;
+  text-decoration: none;
 }
 
-.team-member-link:hover .team-member-name {
-    color: white;
+.team-member-link:hover
+.team-member-name {
+  color: white;
 }
 
 .team-member-icon {
-    width: 5rem;
-    height: 5rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .team-member-linkedin {
-    fill: #0077b5;
+  fill: #0077b5;
 }
 
-.team-member-github:hover, .team-member-linkedin:hover {
-    fill: white;
+.team-member-github:hover,
+.team-member-linkedin:hover {
+  fill: white;
 }
 
 /*koniec sekcji Roberta*/
