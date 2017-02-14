@@ -70,13 +70,12 @@ html, body {
 
 .zajawka-zaj{
     height: 100vh;
-    width: 100%;
     background-image: url(zajawka2.jpg);
     background-size: cover;
     opacity: 0.9;
-
-
 }
+
+
 
 .logo{
     display: flex;
@@ -84,8 +83,6 @@ html, body {
     justify-content: center;
     padding-top: 300px;
     padding-left: 0px;
-
-
 
 }
 .obrazek{
@@ -98,19 +95,36 @@ html, body {
 .nazwa-zaj{
     font-family: 'Raleway',sans-serif;
     font-size:150px;
+    font-weight:bold;
     float:left;
     color: green;
     margin-top: 5px;
     margin-left: 0px;
     margin-bottom: 0px;
+  white-space: nowrap;
+
+
+
 }
+.opis-zaj {
+  font-family: 'Roboto', sans-serif;
+  color: green;
+  font-size: 30px;
+  margin-top: 0px;
+  /* margin-left:450px;*/
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media screen and (min-width:768px){
 .opis-zaj{
-    font-family: 'Roboto',sans-serif;
-    color: green;
-    font-size: 30px;
-    margin-top: 0px;
-    margin-left:450px;
-    padding-top: 10px;
+
+    font-size: 20px;
+
+}
+
 }
 .link{
     text-decoration: none;
@@ -123,10 +137,12 @@ html, body {
     border-radius:5px;
     margin-left: 800px;
     line-height: 150px;
-}
+
 .link:hover{
     color: white;
 }
+
+
 /*koniec sekcji Janka*/
 
 /*sekcja Bartka*/
