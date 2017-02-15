@@ -169,6 +169,7 @@ img {
     padding-top: 20px;
 }
 
+
 .div2 p {
     text-align: justify;
 }
@@ -288,5 +289,7 @@ input:invalid {
     padding: 200px 0;
 
   }
-
+  .border {
+    background-color: rgba(201,201, 201, 0.5);
+  }
 }
