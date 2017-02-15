@@ -1,69 +1,32 @@
-* {
-  box-sizing: border-box;
-}
-
 html, body {
-  font-size: 10px;
-  margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
 /*sekcja Roberta*/
-.nav {
-  width: 100%;
-  position: fixed;
+
+.navbar-inverse {
   background: #85bb65;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  z-index: 9;
+  border: green;
 }
 
-.nav-logo-all {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font: 900 3rem 'Raleway', sans-serif;
-  text-decoration: none;
-  white-space: nowrap;
-  color: green;
+.navbar-inverse
+.navbar-brand {
+  color: black;
 }
 
-.nav-logo {
-  fill: green;;
-  width: 3rem;
-  height: 3rem;
-  margin: 1rem 0;
+.navbar-inverse
+.navbar-nav>li>a {
+  color: black;
 }
 
-.nav-logo-all:hover,
-.nav-logo-all:hover
-.nav-logo {
-  color: white;
-  fill: white;
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: black;
 }
 
-.nav-list {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 3rem;
-  width: 100%;
-  margin: 1rem;
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: white;
 }
 
-.nav-list-item {
-  list-style: none;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: green;;
-}
-
-.nav-link:hover{
-  color: white;
-}
 /* koniec sekcji Roberta*/
 
 /*sekcja Janka*/
