@@ -276,3 +276,17 @@ input:invalid {
 }
 
 /*koniec sekcji Roberta*/
+
+@media screen and (max-width: 991px) {
+   .div1 {
+     display: none;
+   }
+  .div2 {
+    background-image: url("newsletter.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+
+  }
+
+}
