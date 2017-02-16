@@ -94,7 +94,20 @@ html, body {
 
 /*sekcja Bartka*/
 .functions {
-    height: 100vh;
+    min-height: 50vh;
+    position: relative;
+}
+
+.func-img-background {
+  background-image: url("zkvbm2_dp84-didier-weemaels.jpg");
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
 }
 
 .func-1,
