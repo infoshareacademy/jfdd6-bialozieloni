@@ -1,69 +1,32 @@
-* {
-  box-sizing: border-box;
-}
-
 html, body {
-  font-size: 10px;
-  margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
 /*sekcja Roberta*/
-.nav {
-  width: 100%;
-  position: fixed;
+
+.navbar-inverse {
   background: #85bb65;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  z-index: 9;
+  border: green;
 }
 
-.nav-logo-all {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font: 900 3rem 'Raleway', sans-serif;
-  text-decoration: none;
-  white-space: nowrap;
-  color: green;
+.navbar-inverse
+.navbar-brand {
+  color: black;
 }
 
-.nav-logo {
-  fill: green;;
-  width: 3rem;
-  height: 3rem;
-  margin: 1rem 0;
+.navbar-inverse
+.navbar-nav>li>a {
+  color: black;
 }
 
-.nav-logo-all:hover,
-.nav-logo-all:hover
-.nav-logo {
-  color: white;
-  fill: white;
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: black;
 }
 
-.nav-list {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 3rem;
-  width: 100%;
-  margin: 1rem;
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: white;
 }
 
-.nav-list-item {
-  list-style: none;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: green;;
-}
-
-.nav-link:hover{
-  color: white;
-}
 /* koniec sekcji Roberta*/
 
 /*sekcja Janka*/
@@ -209,64 +172,58 @@ html, body {
 
 /*sekcja Bartka*/
 .functions {
-    height: 100vh;
-    width: 100%;
-    display: flex;
+    min-height: 50vh;
+    position: relative;
 }
 
-.func-1-main,
-.func-2-main,
-.func-3-main,
-.func-4-main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    margin: auto;
-    text-align: center;
+.func-img-background {
+  background-image: url("zkvbm2_dp84-didier-weemaels.jpg");
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
 }
 
 .func-1,
 .func-2,
 .func-3,
 .func-4 {
-    flex: 1;
-    height: 200px;
-    width: 200px;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.func-1-par,
-.func-2-par,
-.func-3-par,
-.func-4-par {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    text-align: center;
-}
-
-.func-1-title,
-.func-2-title,
-.func-3-title,
-.func-4-title {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .func-1-icon,
 .func-2-icon,
 .func-3-icon,
 .func-4-icon {
-    width: 70%;
+    width: 12vh;
     height: auto;
 }
+
+.func-1-title,
+.func-2-title,
+.func-3-title,
+.func-4-title {
+  text-align: center;
+  font-size: 2.6rem;
+}
+
+.func-1-par,
+.func-2-par,
+.func-3-par,
+.func-4-par {
+  align-items: center;
+  font-size: 2rem;
+}
+
 
 /*koniec sekcji Bartka*/
 
