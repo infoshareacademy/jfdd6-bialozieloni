@@ -15,7 +15,7 @@ html, body {
 }
 
 .navbar-inverse
-.navbar-nav>li>a {
+.navbar-nav > li > a {
   color: black;
 }
 
@@ -31,71 +31,74 @@ html, body {
 
 /*sekcja Janka*/
 
-.zajawka-zaj{
-    height: 100vh;
-    width: 100%;
-    background-image: url(zajawka2.jpg);
-    background-size: cover;
-    opacity: 0.9;
-
-
-}
-
-.logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 300px;
-    padding-left: 0px;
-
-
+.zajawka-zaj {
+  height: 100vh;
+  width: 100%;
+  background-image: url(zajawka2.jpg);
+  background-size: cover;
+  opacity: 0.9;
 
 }
-.obrazek{
-    width: 200px;
-    height: auto;
-    margin-right: 0px;
-    padding: 0px;
-    fill: green;
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 300px;
+  padding-left: 0px;
+
 }
-.nazwa-zaj{
-    font-family: 'Raleway',sans-serif;
-    font-size:150px;
-    float:left;
-    color: green;
-    margin-top: 5px;
-    margin-left: 0px;
-    margin-bottom: 0px;
+
+.obrazek {
+  width: 200px;
+  height: auto;
+  margin-right: 0px;
+  padding: 0px;
+  fill: green;
 }
-.opis-zaj{
-    font-family: 'Roboto',sans-serif;
-    color: green;
-    font-size: 30px;
-    margin-top: 0px;
-    margin-left:450px;
-    padding-top: 10px;
+
+.nazwa-zaj {
+  font-family: 'Raleway', sans-serif;
+  font-size: 150px;
+  float: left;
+  color: green;
+  margin-top: 5px;
+  margin-left: 0px;
+  margin-bottom: 0px;
 }
-.link{
-    text-decoration: none;
-    font-family: 'Roboto',sans-serif;
-    color: green;
-    font-weight: bold;
-    font-size: 40px;
-    padding: 10px;
-    background-color: #85bb65;
-    border-radius:5px;
-    margin-left: 800px;
-    line-height: 150px;
+
+.opis-zaj {
+  font-family: 'Roboto', sans-serif;
+  color: green;
+  font-size: 30px;
+  margin-top: 0px;
+  margin-left: 450px;
+  padding-top: 10px;
 }
-.link:hover{
-    color: white;
+
+.link {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: green;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 10px;
+  background-color: #85bb65;
+  border-radius: 5px;
+  margin-left: 800px;
+  line-height: 150px;
 }
+
+.link:hover {
+  color: white;
+}
+
 /*koniec sekcji Janka*/
 
 /*sekcja Bartka*/
 .functions {
-    min-height: 50vh;
-    position: relative;
+  min-height: 50vh;
+  position: relative;
 }
 
 .animated {
@@ -130,8 +133,8 @@ html, body {
 .func-2-icon,
 .func-3-icon,
 .func-4-icon {
-    width: 12vh;
-    height: auto;
+  width: 12vh;
+  height: auto;
 }
 
 .func-1-title,
@@ -154,109 +157,43 @@ html, body {
 
 /*Sekcja Tomka */
 
-
-
 .form {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-
-.div1 {
-    display: flex;
-    width: 50%;
-    height: 50vh;
-    margin-bottom: 10vh;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding-top: 100px;
 }
 
 img {
-    max-width: 100%;
-    border-radius: 10px 10px 10px 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.div2 {
-    width: 50%;
-    height: 50vh;
-    margin-bottom: 10vh;
+.control-label {
+  font-size: larger;
 }
 
+.form-group > span {
+  padding-left: 150px;
+}
+
+.border h1 {
+  text-align: center;
+}
+
+.well {
+  background-color: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding-left: 0;
+  padding-top: 0;
+}
 
 .div1 {
-    margin-left: 10%;
-}
-
-
-.div2 {
-    margin-left: 30px;
-    margin-right: 10%;
-}
-
-.info {
-    position: absolute;
-    bottom: 0;
-    font-size: 2rem;
-    font-weight: 300;
-    color: green;
-    background-color: #85bb65;
-    width: 100%;
-    height: 60px;
-    text-align: center;
-    margin: 0;
-    text-transform: uppercase;
-    padding-top: 20px;
-
-}
-
-.div2 p {
-    text-align: justify;
-}
-
-.div2 .newsletter input {
-
-    margin: 20px;
-    width: 300px;
-    height: 40px;
-    border-radius: 5px 5px 5px 5px;
-    font-size: 1.5rem;
-}
-
-button[name="submit"] {
-
-    width: 120px;
-    height: 30px;
-    font-size: 1.5rem;
-    margin-left: 20px;
-}
-
-input:valid{
-    border: 2px solid green;
-}
-
-
-input:invalid {
-
-    border: 2px solid red;
-}
-
-.zgoda {
-    margin-left: 20px;
-
-}
-
-.container {
-    width: 100%;
-    height: 100vh;
-}
-
-#ptaszek {
-    margin: 0;
-    width: 20px;
-    height: 20px;
+  padding-right: 0;
 }
 
 /*koniec sekcji Tomka*/
@@ -292,7 +229,7 @@ input:invalid {
   padding-top: 20px;
 }
 
-.team-member-photo{
+.team-member-photo {
   border: 2px solid green;
   border-radius: 50%;
   max-width: 250px;
@@ -324,3 +261,37 @@ input:invalid {
 }
 
 /*koniec sekcji Roberta*/
+
+
+
+@media screen and (max-width: 1200px) {
+  .div1 {
+    display: none;
+  }
+
+  .div2 {
+    background-image: url("newsletter.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+    width: 100%;
+  }
+
+  .border {
+    background-color: rgba(201, 201, 201, 0.5);
+    max-width: 80%;
+    margin: auto;
+    padding-top: 40px;
+  }
+
+  .control-label {
+    font-size: larger;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+
+  .border {
+    padding-bottom: vh;
+  }
+}
