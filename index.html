@@ -8,13 +8,15 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,900&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+              aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -46,6 +48,8 @@
 </header>
 
 <section class="functions row"
+
+<section class="functions"
          id="functions">
   <div class="func-img-background"></div>
   <div class="func-1-main col-xs-12 col-sm-6 col-md-3">
@@ -61,6 +65,7 @@
       </p>
     </div>
   </div>
+
 
   <div class="func-2-main col-xs-12 col-sm-6 col-md-3">
     <div class="func-2">
@@ -114,33 +119,53 @@
   </div>
 </section>
 
-<section class="form" id="form">
 
-  <div class="div1">
-    <img src="newsletter.jpg" alt="newsletter">
+<section class="form container"id="form">
+
+  <div class="row">
+
+    <div class="div1 col-xs-12 col-md-6">
+      <img src="newsletter.jpg" alt="newsletter">
+    </div>
+    <div class="div2 col-xs-12 col-md-6">
+      <div class="well border"><h1>Zapisz się na premierę!</h1><br>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">E-mail</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Twój adres e-mail">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label class="form-declaration">
+                  <input type="checkbox" required> Wyrażam zgodę na przetwarzanie moich danych osobowych do celów marketingowych
+                  zgodnie z Ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz.U. nr 133, poz. 883), a
+                  także wyrażam zgodę na otrzymywanie informacji handlowych środkami komunikacji elektronicznej
+                  wysyłanymi przez GWCalc Sp. z o.o. oraz na wykorzystanie komunikacji email w celach marketingowych.<br>
+                  <br>
+                  *Informujemy, że zostanie wysłany tylko jeden e-mail z informacją o premierze naszego produktu.
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-success btn-lg">ZAPISZ MNIE</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 
-  <div class="div2">
-    <form class="newsletter">
-      <div><input type="text" name="firstname" placeholder="Twoje imię" required></div>
-      <div><input type="text" name="lastname" placeholder="Twoje nazwisko" required></div>
-      <div><input type="email" name="email" placeholder="Twój adres e-mail" required></div>
-      <button name="submit">Zapisz mnie</button>
-      <p class="zgoda"><input id="ptaszek" type="checkbox" name="zgoda" required> Wyrażam zgodę na przetwarzanie
-        moich danych osobowych w celach marketingowych przez GWCalc S.A. z siedzibą w Gdańsku ul. Łąkowa 39/44 i
-        na powierzenie danych w celu przetwarzania podmiotom współpracującym z GWCalc S.A., w zakresie
-        działalności marketingowej oraz na otrzymywanie na podany adres e-mail informacji handlowych. Podanie
-        danych jest dobrowolne. Użytkownikom przysługuje prawo dostępu do swoich danych i ich poprawiania </p>
-    </form>
-
-
-  </div>
-
-
-  <p class="info">Informujemy, że zostanie wysłany tylko jeden e-mail z informacją o premierze naszego produktu</p>
-
+  <!--<p class="info">Informujemy, że zostanie wysłany tylko jeden e-mail z informacją o premierze naszego produktu</p>-->
 
 </section>
+
+
 <section id="team" class="team">
   <h2 class="team-title">Team</h2>
   <div class="team-members">
@@ -241,5 +266,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="nav.js"></script>
+<script src="feature-animations.js"></script>
 </body>
 </html>
