@@ -197,34 +197,39 @@ img {
 /*sekcja Roberta*/
 
 .team {
-  padding-bottom: 100px;
+  background: #A7A7A7;
 }
 
 .team-member-photo {
-  margin: 100px auto 0;
   filter: grayscale(1);
+  margin: 50px auto auto;
 }
 
 .team-member-name {
   color: black;
+  font-weight: 900;
 }
 
-.homepage {
-  font-size: 40px;
+.fa-home {
   color: black;
 }
 
-.social-icons {
-  width: 40px;
-  height: 40px;
+.fa-github {
+  color: #6e5494;
+  margin: auto 10px;
 }
 
-.github {
-  fill: #6e5494;
+.fa-linkedin {
+  color: #0077b5;
 }
 
-.linkedin {
-  fill: #0077b5;
+.team-member-icon {
+  transition-duration: 0.3s;
+  margin-bottom: 50px;
+}
+
+.team-member-icon:hover {
+  transform: scale(1.3);
 }
 
 /*koniec sekcji Roberta*/
