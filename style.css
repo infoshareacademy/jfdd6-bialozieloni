@@ -101,6 +101,10 @@ html, body {
   position: relative;
 }
 
+.animated {
+  animation-duration: 6s;
+}
+
 .func-img-background {
   background-image: url("zkvbm2_dp84-didier-weemaels.jpg");
   background-size: cover;
@@ -234,6 +238,15 @@ img {
 
 /*koniec sekcji Roberta*/
 
+@media screen and (max-width: 768px) {
+
+  .border {
+  padding: 0 20px 20px 20px;
+  }
+  .form-declaration {
+    font-size: 1rem;
+  }
+}
 
 
 @media screen and (max-width: 1200px) {
