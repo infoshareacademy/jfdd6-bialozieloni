@@ -48,66 +48,76 @@ header {
 
 .zajawka-nazwa {
   display: inline-block;
-  font-family: 'Raleway',sans-serif;
-  font-size:25vh;
-  font-weight:bold;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25vh;
+  font-weight: bold;
   color: green;
 }
-.zajawka-obrazek{
+
+.zajawka-obrazek {
   width: auto;
   height: 20vh;
 }
+
 .zajawka-opis {
   font-family: 'Roboto', sans-serif;
   color: green;
   font-size: 3vh;
   font-weight: bold;
 }
-.logo{
+
+.logo {
   white-space: nowrap;
 }
+
 .btn-primary-zaj {
-color: white;
+  color: white;
   position: relative;
-background-image: linear-gradient(green,lightgreen);
-border-radius: 3px;
-box-shadow: 0px 1px 4px -2px #333;
-text-shadow: 0px -1px #333;
+  background-image: linear-gradient(green, lightgreen);
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px -2px #333;
+  text-shadow: 0px -1px #333;
   margin-top: 50px;
 }
-.btn-primary-zaj:after{
-content: '';
-position: absolute;
-top: 2px;
-left: 2px;
-width: calc(100% - 4px);
-height: 50%;
-background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
-}
-.btn-primary-zaj:hover{
-background: linear-gradient(#073,#0fa)
-}
-.btn-group-lg>.btn, .btn-lg{
-font-size: 30px;
-font-weight: bold;
+
+.btn-primary-zaj:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: 50%;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
 }
 
+.btn-primary-zaj:hover {
+  background: linear-gradient(#073, #0fa)
+}
 
-@media screen and (max-width:760px) {
+.btn-group-lg > .btn, .btn-lg {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 760px) {
 
   .zajawka-nazwa {
     font-size: 15vh;
   }
-  .zajawka-obrazek{
+
+  .zajawka-obrazek {
 
     height: 12vh;
   }
-  .logo{
+
+  .logo {
     white-space: normal;
+  }
+  .btn-group-lg > .btn, .btn-lg {
+    font-size: 20px;
   }
 
 }
-
 
 /*koniec sekcji Janka*/
 
@@ -281,13 +291,13 @@ img {
 @media screen and (max-width: 768px) {
 
   .border {
-  padding: 0 20px 20px 20px;
+    padding: 0 20px 20px 20px;
   }
+
   .form-declaration {
     font-size: 1rem;
   }
 }
-
 
 @media screen and (max-width: 1200px) {
   .div1 {
