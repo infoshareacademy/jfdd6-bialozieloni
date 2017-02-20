@@ -1,0 +1,68 @@
+<style>
+  .cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+  }
+  .negative {
+    background: #c00;
+  }
+  .positive {
+    background: #0c0;
+  }
+  .pig {
+    background: pink;
+  }
+  .coin {
+    background: yellow;
+  }
+</style>
+<div id="app"></div>
+<script src="../../../vendor/jquery.js"></script>
+<script>
+  $(document).ready(function () {
+    var $container = $('#app');
+    var $table = $('<table>');
+    var $tr, $td;
+
+    $container.append($table);
+
+    for (var y = 0; y < 10; y += 1) {
+      $tr = $('<tr>');
+      for ( var x = 0; x < 10; x += 1) {
+        $td = $('<td>')
+          .addClass('cell');
+
+        if ((x + y) % 2 === 0) {
+          $td.addClass('positive');
+        } else {
+          $td.addClass('negative');
+        }
+        $tr.append($td);
+      }
+      $table.append($tr);
+    }
+
+    $('tr:last td', $table).on('click', function() {
+      $('.pig', $table).removeClass('pig');
+      $(this).addClass('pig');
+    });
+
+    $('tr:first td').eq(0).addClass('coin');
+
+    function below(node) {return $(node).parent().next().find(':nth-child('+ ($(node).index() + 1) +')');}
+
+    setInterval(function () {
+      $('.coin', $table).each(function () {
+        $(this).removeClass('coin');
+        below(this).addClass('coin');
+      })
+
+      if ($('.coin.pig', $table).length > 0) {
+        alert('WIN')
+      }
+    }, 1000)
+
+
+  });
+</script>
