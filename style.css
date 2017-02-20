@@ -201,7 +201,8 @@ img {
 /*sekcja Roberta*/
 
 .team {
-  background: #A7A7A7;
+  background: url(123.jpg);
+  background-size: cover;
 }
 
 .team-member-photo {
