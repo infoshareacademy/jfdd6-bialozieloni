@@ -2,28 +2,27 @@
   .cell {
     width: 50px;
     height: 50px;
-    border: 1px solid #000;
   }
-  .negative {
-    background: #c00;
-  }
-  .positive {
-    background: #0c0;
-  }
+
   .pig {
     background: pink;
   }
   .coin {
-    background: yellow;
+    background-image: url("js/pig-coin.svg");
+    background-size: cover;
   }
+
 </style>
 <div id="app"></div>
-<script src="../../../vendor/jquery.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
 <script>
   $(document).ready(function () {
     var $container = $('#app');
     var $table = $('<table>');
     var $tr, $td;
+    var howOften = 1000;
+    var coinSpeed = 1000;
+
 
     $container.append($table);
 
@@ -48,10 +47,17 @@
       $(this).addClass('pig');
     });
 
-    $('tr:first td').eq(0).addClass('coin');
+    function makeCoin() {
+      setInterval( function () {
+        $('tr:first td', $table)
+          .eq(Math.floor(Math.random() * 10))
+          .addClass('coin');
+      }, howOften);
+    }
+
+
 
     function below(node) {return $(node).parent().next().find(':nth-child('+ ($(node).index() + 1) +')');}
-
     setInterval(function () {
       $('.coin', $table).each(function () {
         $(this).removeClass('coin');
@@ -61,7 +67,9 @@
       if ($('.coin.pig', $table).length > 0) {
         alert('WIN')
       }
-    }, 1000)
+    }, coinSpeed)
+    makeCoin();
+
 
 
   });
