@@ -31,66 +31,92 @@ html, body {
 
 /*sekcja Janka*/
 
-.zajawka-zaj {
-  height: 100vh;
-  width: 100%;
+header {
   background-image: url(zajawka2.jpg);
   background-size: cover;
-  opacity: 0.9;
+  height: 100vh;
 
+}
+
+.zajawka-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.zajawka-nazwa {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25vh;
+  font-weight: bold;
+  color: green;
+}
+
+.zajawka-obrazek {
+  width: auto;
+  height: 20vh;
+}
+
+.zajawka-opis {
+  font-family: 'Roboto', sans-serif;
+  color: green;
+  font-size: 3vh;
+  font-weight: bold;
 }
 
 .logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 300px;
-  padding-left: 0px;
-
+  white-space: nowrap;
 }
 
-.obrazek {
-  width: 200px;
-  height: auto;
-  margin-right: 0px;
-  padding: 0px;
-  fill: green;
-}
-
-.nazwa-zaj {
-  font-family: 'Raleway', sans-serif;
-  font-size: 150px;
-  float: left;
-  color: green;
-  margin-top: 5px;
-  margin-left: 0px;
-  margin-bottom: 0px;
-}
-
-.opis-zaj {
-  font-family: 'Roboto', sans-serif;
-  color: green;
-  font-size: 30px;
-  margin-top: 0px;
-  margin-left: 450px;
-  padding-top: 10px;
-}
-
-.link {
-  text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  color: green;
-  font-weight: bold;
-  font-size: 40px;
-  padding: 10px;
-  background-color: #85bb65;
-  border-radius: 5px;
-  margin-left: 800px;
-  line-height: 150px;
-}
-
-.link:hover {
+.btn-primary-zaj {
   color: white;
+  position: relative;
+  background-image: linear-gradient(green, lightgreen);
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px -2px #333;
+  text-shadow: 0px -1px #333;
+  margin-top: 50px;
+}
+
+.btn-primary-zaj:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: 50%;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+}
+
+.btn-primary-zaj:hover {
+  background: linear-gradient(#073, #0fa)
+}
+
+.btn-group-lg > .btn, .btn-lg {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 760px) {
+
+  .zajawka-nazwa {
+    font-size: 15vh;
+  }
+
+  .zajawka-obrazek {
+
+    height: 12vh;
+  }
+
+  .logo {
+    white-space: normal;
+  }
+  .btn-group-lg > .btn, .btn-lg {
+    font-size: 20px;
+  }
+
 }
 
 /*koniec sekcji Janka*/
@@ -242,13 +268,13 @@ img {
 @media screen and (max-width: 768px) {
 
   .border {
-  padding: 0 20px 20px 20px;
+    padding: 0 20px 20px 20px;
   }
+
   .form-declaration {
     font-size: 1rem;
   }
 }
-
 
 @media screen and (max-width: 1200px) {
   .div1 {
