@@ -233,8 +233,44 @@ img {
   padding-right: 0;
 }
 
+.additional {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("additional.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 
+}
 
+.addiitional__form{
+  display: flex;
+  flex-direction: row;
+
+}
+.additional__items1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 5%;
+}
+
+.additional__items2 {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 5%;
+}
+.additional__items-func {
+  flex-direction: column;
+  font-size: 2.6rem;
+  color: white;
+}
+
+.additional__items-func p{
+ display: inline;
+}
 /*koniec sekcji Tomka*/
 
 /*sekcja Roberta*/
