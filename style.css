@@ -94,7 +94,7 @@ header {
   background: linear-gradient(#073, #0fa)
 }
 
-.btn-group-lg > .btn, .btn-lg {
+.btn-duzy {
   font-size: 50px;
   font-weight: bold;
 }
