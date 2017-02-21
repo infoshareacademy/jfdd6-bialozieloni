@@ -20,9 +20,8 @@
     var $container = $('#app');
     var $table = $('<table>');
     var $tr, $td;
-    var howOften = 1000;
-    var coinSpeed = 1000;
-
+    var howOften = Math.random() * 1200;
+    var coinSpeed = 500;
 
     $container.append($table);
 
@@ -32,11 +31,6 @@
         $td = $('<td>')
           .addClass('cell');
 
-        if ((x + y) % 2 === 0) {
-          $td.addClass('positive');
-        } else {
-          $td.addClass('negative');
-        }
         $tr.append($td);
       }
       $table.append($tr);
