@@ -35,3 +35,15 @@ $('.navbar-brand').on('click', function (event) {
     scrollTop: 0
   }, 1000);
 });
+
+// ponizej kod Janka
+
+ $('.btn-zaj').on('click', function (event) {
+  var p = $('#form');
+  var offset = p.offset().top;
+
+  $('html, body').animate({
+    scrollTop: offset
+  }, 1000);
+});
+

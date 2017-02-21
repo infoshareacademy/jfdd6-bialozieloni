@@ -4,12 +4,6 @@
     height: 50px;
     border: 1px solid #000;
   }
-  .negative {
-    background: #c00;
-  }
-  .positive {
-    background: #0c0;
-  }
   .pig {
     background: pink;
   }
@@ -19,14 +13,17 @@
 </style>
 <div id="timer"></div>
 <div id="app"></div>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
   $(document).ready(function () {
     var $container = $('#app');
+    var points = 0;
+    var $counter = $('<p>').text('Points: ' + points);
     var $table = $('<table>');
     var $tr, $td;
 
+
+    $container.append($counter);
     $container.append($table);
 
     for (var y = 0; y < 10; y += 1) {
@@ -34,12 +31,6 @@
       for ( var x = 0; x < 10; x += 1) {
         $td = $('<td>')
           .addClass('cell');
-
-//        if ((x + y) % 2 === 0) {
-//          $td.addClass('positive');
-//        } else {
-//          $td.addClass('negative');
-//        }
         $tr.append($td);
       }
       $table.append($tr);
@@ -54,6 +45,11 @@
 
     function below(node) {return $(node).parent().next().find(':nth-child('+ ($(node).index() + 1) +')');}
 
+    function updatePoints () {
+      points += 1;
+      $('p').text('Points: ' + points);
+    }
+
     setInterval(function () {
       $('.coin', $table).each(function () {
         $(this).removeClass('coin');
@@ -61,10 +57,9 @@
       })
 
       if ($('.coin.pig', $table).length > 0) {
-        alert('WIN')
+        updatePoints ();
       }
-    }, 1000)
-  });
+    }, 100)
 
 
 
