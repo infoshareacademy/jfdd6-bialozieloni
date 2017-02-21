@@ -15,55 +15,20 @@
 <div id="app"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
-  $(document).ready(function () {
-    var $container = $('#app');
-    var points = 0;
-    var $counter = $('<p>').text('Points: ' + points);
-    var $table = $('<table>');
-    var $tr, $td;
+  var points = 0;
+  var $container = $('#app');
+  var $counter = $('<p>').text('Points: ' + points);
+  var $table = $('<table>');
+  var $tr, $td;
 
+  function below(node) {return $(node).parent().next().find(':nth-child('+ ($(node).index() + 1) +')');}
 
-    $container.append($counter);
-    $container.append($table);
+  function updatePoints () {
+    points += 1;
+    $('p').text('Points: ' + points);
+  }
 
-    for (var y = 0; y < 10; y += 1) {
-      $tr = $('<tr>');
-      for ( var x = 0; x < 10; x += 1) {
-        $td = $('<td>')
-          .addClass('cell');
-        $tr.append($td);
-      }
-      $table.append($tr);
-    }
-
-    $('tr:last td', $table).on('click', function() {
-      $('.pig', $table).removeClass('pig');
-      $(this).addClass('pig');
-    });
-
-    $('tr:first td').eq(0).addClass('coin');
-
-    function below(node) {return $(node).parent().next().find(':nth-child('+ ($(node).index() + 1) +')');}
-
-    function updatePoints () {
-      points += 1;
-      $('p').text('Points: ' + points);
-    }
-
-    setInterval(function () {
-      $('.coin', $table).each(function () {
-        $(this).removeClass('coin');
-        below(this).addClass('coin');
-      })
-
-      if ($('.coin.pig', $table).length > 0) {
-        updatePoints ();
-      }
-    }, 100)
-
-
-
-  $(function (){
+  function setTimer() {
     var count = 15;
     var counter = setInterval(timer, 1000);
     function timer(){
@@ -81,10 +46,42 @@
         return;
       }
     }
+  }
+
+  $(document).ready(function () {
+    $container.append($counter);
+    $container.append($table);
+
+    for (var y = 0; y < 10; y += 1) {
+      $tr = $('<tr>');
+      for ( var x = 0; x < 10; x += 1) {
+        $td = $('<td>')
+          .addClass('cell');
+        $tr.append($td);
+      }
+      $table.append($tr);
+    }
+
+    setTimer();
+
+    $('tr:last td', $table).on('click', function() {
+      $('.pig', $table).removeClass('pig');
+      $(this).addClass('pig');
+    });
+
+    $('tr:first td').eq(0).addClass('coin');
+
+
+    setInterval(function () {
+      $('.coin', $table).each(function () {
+        $(this).removeClass('coin');
+        below(this).addClass('coin');
+      });
+
+      if ($('.coin.pig', $table).length > 0) {
+        updatePoints ();
+      }
+    }, 250);
   })
-
-
-
-
 
 </script>
