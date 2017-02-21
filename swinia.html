@@ -2,6 +2,7 @@
   .cell {
     width: 50px;
     height: 50px;
+    border: 1px solid #000;
   }
 
   .pig {
@@ -11,8 +12,8 @@
     background-image: url("js/pig-coin.svg");
     background-size: cover;
   }
-
 </style>
+<div id="timer"></div>
 <div id="app"></div>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script>
@@ -22,7 +23,41 @@
     var $tr, $td;
     var howOften = Math.random() * 1200;
     var coinSpeed = 500;
+  var points = 0;
+  var $container = $('#app');
+  var $counter = $('<p>').text('Points: ' + points);
+  var $table = $('<table>');
+  var $tr, $td;
 
+  function below(node) {return $(node).parent().next().find(':nth-child('+ ($(node).index() + 1) +')');}
+
+  function updatePoints () {
+    points += 1;
+    $('p').text('Points: ' + points);
+  }
+
+  function setTimer() {
+    var count = 15;
+    var counter = setInterval(timer, 1000);
+    function timer(){
+      --count;
+      var minutes = Math.floor(count / 60);
+      var sec = count % 60;
+      if(sec<10) sec = '0' + sec;
+      var out = "Koniec gry za " + minutes + ':' + sec;
+      $("#timer").html(out);
+      if( count <= 0)
+      {
+        //tutaj referencja do pętli, która generuje monety
+//        Wyświetlenie komunikatu: Twoje punkty to: ""
+        clearInterval(counter);
+        return;
+      }
+    }
+  }
+
+  $(document).ready(function () {
+    $container.append($counter);
     $container.append($table);
 
     for (var y = 0; y < 10; y += 1) {
@@ -35,6 +70,8 @@
       }
       $table.append($tr);
     }
+
+    setTimer();
 
     $('tr:last td', $table).on('click', function() {
       $('.pig', $table).removeClass('pig');
@@ -56,10 +93,10 @@
       $('.coin', $table).each(function () {
         $(this).removeClass('coin');
         below(this).addClass('coin');
-      })
+      });
 
       if ($('.coin.pig', $table).length > 0) {
-        alert('WIN')
+        updatePoints ();
       }
     }, coinSpeed)
     makeCoin();
