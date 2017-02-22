@@ -338,6 +338,9 @@ img {
 }
 
 /*koniec sekcji Roberta*/
+.game {
+  display: none;
+}
 
 #game{
   display: flex;

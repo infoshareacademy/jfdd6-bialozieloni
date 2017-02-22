@@ -9,7 +9,7 @@
 
   $('#newsletterSubmit').click(function () {
     $('#form').hide();
-    $('#game').show();
+    $('.game').attr('id', 'game');
   });
 
 
