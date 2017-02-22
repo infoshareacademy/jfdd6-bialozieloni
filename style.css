@@ -49,20 +49,20 @@ header {
 .zajawka-nazwa {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
-  font-size: 25vh;
+  font-size: 20vmin;
   font-weight: bold;
   color: green;
 }
 
 .zajawka-obrazek {
   width: auto;
-  height: 20vh;
+  height: 17vmin;
 }
 
 .zajawka-opis {
   font-family: 'Roboto', sans-serif;
   color: green;
-  font-size: 3vh;
+  font-size: 3vmin;
   font-weight: bold;
 }
 
@@ -94,20 +94,20 @@ header {
   background: linear-gradient(#073, #0fa)
 }
 
-.btn-group-lg > .btn, .btn-lg {
+.btn-duzy {
   font-size: 50px;
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
 
   .zajawka-nazwa {
-    font-size: 15vh;
+    font-size: 15vmin;
   }
 
   .zajawka-obrazek {
 
-    height: 12vh;
+    height: 12vmin;
   }
 
   .logo {
@@ -118,14 +118,14 @@ header {
   }
 
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 640px){
   .zajawka-nazwa {
-    font-size: 8vh;
+    font-size: 10vmin;
   }
 
   .zajawka-obrazek {
 
-    height: 6vh;
+    height: 8vmin;
   }
 
 }
