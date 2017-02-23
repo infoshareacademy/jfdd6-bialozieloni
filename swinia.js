@@ -19,7 +19,7 @@
 
   function updatePoints() {
     points += 1;
-    $('p').text('Points: ' + points);
+    $('#app p').text('Points: ' + points);
   }
 
   function setTimer() {
