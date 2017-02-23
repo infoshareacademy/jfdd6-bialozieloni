@@ -354,11 +354,23 @@ img {
 }
 
 .cell {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
+
+.counter {
+  font-weight: 900;
+}
+
+.pointer {
+  font-weight: 900;
+  text-align: right;
+}
+
 table {
-  background: steelblue;
+  background-image: url(Background.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .coin {
