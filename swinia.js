@@ -6,6 +6,18 @@
   var $table = $('<table>');
   var $tr, $td;
   var coinsIntervalId;
+  var $check = $('#form__checkbox:checked');  // checkbox w pozycji checked
+  var $email = $('#inputEmail3'); // id pola input type ='e-mail'
+
+  function start() {
+
+      if($check && $email.value !== '') {        //jeśli jest checked i jeśli wartość value różna od pustego ciągu znaków
+
+          $('#newsletterSubmit').on('click', function () {    // na kliknięcie buttona 'ZAPISZ MNIE"
+              $('.game').show('slow');                     // pokaż powoli sekcję gra
+          })
+      }
+  }
 
   $('#newsletterSubmit').click(function () {
     $('#form').hide();
@@ -20,7 +32,7 @@
   function updatePoints() {
     points += 1;
     $('p', $container).text('Points: ' + points);
-    $('#gameover').text('Liczba zdobytych punktów: ' + points);
+    $('.points').text('Liczba zdobytych punktów: ' + points);
   }
 
   //sterowanie na strzalkach
@@ -67,7 +79,9 @@
         clearInterval(coinsIntervalId);
         clearInterval(counter);
         $('#gameover').fadeIn(1000);
-        $('#game').fadeOut(1000);
+        // $('#gameover').css('display', 'flex');
+
+        // $('#game').fadeOut(1000);
       }
     }
   }

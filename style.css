@@ -203,7 +203,7 @@ header {
 
 }
 
-img {
+.stamp {
   max-width: 100%;
   height: auto;
 
@@ -344,7 +344,6 @@ img {
 
 .game {
   display: none;
-
 }
 
 #game{
@@ -352,14 +351,49 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  background-color: black;
 }
+.gameover{
+  position: absolute;
+  width: 100%;
+  height: 85vh;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+}
+.bravo {
+  text-align: center;
+  font-size: 12rem;
+  color: black;
+  padding-top: 3%;
+  z-index: 1;
+  font-family: 'Mystery Quest', cursive;
 
+}
+.points {
+  font-size: 5rem;
+  color: black;
+  z-index: 1;
+  text-align: center;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+.pig_img{
+  z-index: 1;
+  width: 50%;
+  text-align: center;
+}
+.again{
+  z-index: 1;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Shadows Into Light Two', cursive;
+}
 .cell {
   width: 80px;
   height: 80px;
 }
 table {
-  background: steelblue;
+  background-image: url("tlo__pig.jpg");
 
 }
 
