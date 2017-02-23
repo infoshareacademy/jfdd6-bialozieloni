@@ -32,8 +32,10 @@ html, body {
 /*sekcja Janka*/
 
 header {
+  background-attachment: fixed;
   background-image: url(zajawka2.jpg);
   background-size: cover;
+  background-position: top;
   height: 100vh;
 
 }
@@ -46,7 +48,7 @@ header {
   height: 100vh;
 }
 
-.zajawka-nazwa {
+.zajawka-nazwa{
   display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-size: 20vmin;
@@ -54,7 +56,7 @@ header {
   color: green;
 }
 
-.zajawka-obrazek {
+.zajawka-obrazek{
   width: auto;
   height: 17vmin;
 }

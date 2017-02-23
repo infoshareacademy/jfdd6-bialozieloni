@@ -47,3 +47,7 @@ $('.navbar-brand').on('click', function (event) {
   }, 1000);
 });
 
+$(window).on('scroll', function(){
+  $('header').css({
+    backgroundPosition: '0 ' + (-$(window).scrollTop() * 0.6) + 'px'
+  }, 2000)});
