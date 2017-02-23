@@ -389,12 +389,23 @@ header {
   font-family: 'Shadows Into Light Two', cursive;
 }
 .cell {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
-table {
-  background-color: #4682b4;
 
+.counter {
+  font-weight: 900;
+}
+
+.pointer {
+  font-weight: 900;
+  text-align: right;
+}
+
+table {
+  background-image: url(Background.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .coin {

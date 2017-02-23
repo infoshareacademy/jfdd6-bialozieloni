@@ -1,8 +1,6 @@
   var howOften = 500;
   var coinSpeed = 200;
   var points = 0;
-  var $container = $('#app');
-  var $counter = $('<p>').text('Points: ' + points);
   var $table = $('<table>');
   var $tr, $td;
   var coinsIntervalId;
@@ -33,6 +31,7 @@
     points += 1;
     $('p', $container).text('Points: ' + points);
     $('.points').text('Liczba zdobytych punktów: ' + points);
+    $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
   }
 
   //sterowanie na strzalkach
@@ -73,15 +72,12 @@
         sec = '0' + sec;
       }
 
-      var out = "Koniec gry za " + minutes + ':' + sec;
-      $("#timer").html(out);
+      var out = "CZAS: 00:" + sec;
+      $('table tr:nth-child(1) td:nth-child(1)').addClass('counter').html(out);
       if (count == 0) {
         clearInterval(coinsIntervalId);
         clearInterval(counter);
         $('#gameover').fadeIn(1000);
-        // $('#gameover').css('display', 'flex');
-
-        // $('#game').fadeOut(1000);
       }
     }
   }
@@ -95,8 +91,7 @@
   }
 
     $(document).ready(function () {
-      $container.append($counter);
-      $container.append($table);
+      $('.game').append($table);
 
       for (var y = 0; y < 10; y += 1) {
         $tr = $('<tr>');
@@ -106,12 +101,13 @@
           $tr.append($td);
         }
         $table.append($tr);
-        $('table tr:nth-child(10) td:nth-child(5)').addClass('pig') //świnia ładuje się razem z grą
+        $('table tr:nth-child(1) td:nth-child(10)').addClass('pointer').text('PUNKTY: ' + points);
+        $('table tr:nth-child(9) td:nth-child(5)').addClass('pig') //świnia ładuje się razem z grą
       }
 
     setTimer();
 
-    $('tr:last td', $table).on('click', function () {
+    $('tr:nth-child(9) td', $table).on('click', function () {
       $('.pig', $table).removeClass('pig');
       $(this).addClass('pig');
       if ($('.coin.pig', $table).length > 0) {
