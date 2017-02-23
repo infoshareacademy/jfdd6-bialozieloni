@@ -288,7 +288,12 @@ img {
   font-size: 5rem;
 }
 
-
+#game {
+  display: none;
+}
+#gameover {
+  display: none;
+}
 
 
 /*koniec sekcji Tomka*/
@@ -333,6 +338,31 @@ img {
 }
 
 /*koniec sekcji Roberta*/
+.game {
+  display: none;
+}
+
+#game{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#game .cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+}
+
+#game .pig {
+  background: pink;
+}
+#game .coin {
+  background-image: url("js/pig-coin.svg");
+  background-size: cover;
+}
+
 
 @media screen and (max-width: 768px) {
 
