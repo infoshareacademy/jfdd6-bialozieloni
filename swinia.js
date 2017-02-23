@@ -19,7 +19,8 @@
 
   function updatePoints() {
     points += 1;
-    $('#app p').text('Points: ' + points);
+    $('p', $container).text('Points: ' + points);
+    $('#gameover').text('Liczba zdobytych punktów: ' + points);
   }
 
   //sterowanie na strzalkach
@@ -49,7 +50,7 @@
   });
 
   function setTimer() {
-    var count = 60;
+    var count = 5;
     var counter = setInterval(timer, 1000);
 
     function timer() {
@@ -66,6 +67,7 @@
         clearInterval(coinsIntervalId);
         clearInterval(counter);
         $('#gameover').fadeIn(1000);
+        $('#game').fadeOut(1000);
       }
     }
   }
