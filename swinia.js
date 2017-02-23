@@ -1,5 +1,5 @@
-  var howOften = Math.random() * 2500;
-  var coinSpeed = 300;
+  var howOften = 500;
+  var coinSpeed = 200;
   var points = 0;
   var $container = $('#app');
   var $counter = $('<p>').text('Points: ' + points);
@@ -22,8 +22,34 @@
     $('#app p').text('Points: ' + points);
   }
 
+  //sterowanie na strzalkach
+  $(document).keydown(function(e) {
+    switch(e.which) {
+      case 37: // left
+        if ( $('.pig', $table).prev().length===1){    //sprawdza czy porzedni element ma długość, jeżeli by nie miał to znaczy że nie jest elementem tabeli i linijka poniżej się nie wykonuje
+          $('.pig', $table).removeClass('pig').prev().addClass('pig')
+        }
+        if ($('.coin.pig', $table).length > 0) {
+          updatePoints();
+        }
+        break;
+
+      case 39: // right
+        if ( $('.pig', $table).next().length===1){
+          $('.pig', $table).removeClass('pig').next().addClass('pig')
+        }
+        if ($('.coin.pig', $table).length > 0) {
+          updatePoints();
+        }
+        break;
+
+      default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+  });
+
   function setTimer() {
-    var count = 10;
+    var count = 60;
     var counter = setInterval(timer, 1000);
 
     function timer() {
@@ -52,20 +78,20 @@
     }, howOften);
   }
 
+    $(document).ready(function () {
+      $container.append($counter);
+      $container.append($table);
 
-  $(document).ready(function () {
-    $container.append($counter);
-    $container.append($table);
-
-    for (var y = 0; y < 10; y += 1) {
-      $tr = $('<tr>');
-      for (var x = 0; x < 10; x += 1) {
-        $td = $('<td>')
-          .addClass('cell');
-        $tr.append($td);
+      for (var y = 0; y < 10; y += 1) {
+        $tr = $('<tr>');
+        for ( var x = 0; x < 10; x += 1) {
+          $td = $('<td>')
+            .addClass('cell');
+          $tr.append($td);
+        }
+        $table.append($tr);
+        $('table tr:nth-child(10) td:nth-child(5)').addClass('pig') //świnia ładuje się razem z grą
       }
-      $table.append($tr);
-    }
 
     setTimer();
 

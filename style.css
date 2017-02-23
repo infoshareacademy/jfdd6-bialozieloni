@@ -190,6 +190,7 @@ header {
   font-size: 2rem;
 }
 
+
 /*koniec sekcji Bartka*/
 
 /*Sekcja Tomka */
@@ -338,6 +339,9 @@ img {
 }
 
 /*koniec sekcji Roberta*/
+
+/* sekcja gry */
+
 .game {
   display: none;
 }
@@ -349,18 +353,26 @@ img {
   flex-direction: column;
 }
 
-#game .cell {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #000;
+.cell {
+  width: 80px;
+  height: 80px;
+}
+table {
+  background: steelblue;
 }
 
-#game .pig {
-  background: pink;
-}
-#game .coin {
-  background-image: url("js/pig-coin.svg");
+.coin {
+  background-image: url("coin-zajebista.svg");
   background-size: cover;
+
+}
+.pig {
+  background-image: url("piggy-bank.svg");
+  background-size: cover;
+}
+
+.pig.coin {
+  background-image: url("sukces.svg");
 }
 
 
