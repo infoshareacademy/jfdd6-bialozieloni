@@ -29,6 +29,7 @@
         }
         if ($('.coin.pig', $table).length > 0) {
           updatePoints();
+          $('.coin.pig', $table).removeClass('coin');
         }
         break;
 
@@ -38,6 +39,7 @@
         }
         if ($('.coin.pig', $table).length > 0) {
           updatePoints();
+          $('.coin.pig', $table).removeClass('coin');
         }
         break;
 
@@ -98,6 +100,7 @@
       $(this).addClass('pig');
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
+        $('.coin.pig', $table).removeClass('coin');
       }
     });
 
@@ -113,6 +116,7 @@
 
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
+        $('.coin.pig', $table).removeClass('coin');
       }
     }, coinSpeed)
     makeCoin();
