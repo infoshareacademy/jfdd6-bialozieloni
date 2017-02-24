@@ -32,10 +32,10 @@ html, body {
 /*sekcja Janka*/
 
 header {
-  background-attachment: fixed;
+  background-attachment: fixed; /* potrzebne do paralaxy*/
   background-image: url(zajawka2.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: top; /* potrzebne do paralaxy*/
   height: 100vh;
 
 }

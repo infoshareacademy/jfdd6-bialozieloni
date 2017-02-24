@@ -46,7 +46,7 @@ $('.navbar-brand').on('click', function (event) {
     scrollTop: offset
   }, 1000);
 });
-
+ //  paralaxa
 $(window).on('scroll', function(){
   $('header').css({
     backgroundPosition: '0 ' + (-$(window).scrollTop() * 0.6) + 'px'
