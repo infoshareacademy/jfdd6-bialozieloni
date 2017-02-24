@@ -437,6 +437,10 @@ table {
   background-image: url("explosion.svg");
 }
 
+.no-item {
+  background: none;
+}
+
 
 @media screen and (max-width: 768px) {
 

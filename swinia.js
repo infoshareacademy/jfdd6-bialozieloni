@@ -2,8 +2,10 @@
   var coinSpeed = 200;
   var points = 0;
   var $table = $('<table>');
-  var $tr, $td;
+  var movementIntervalId;
   var coinsIntervalId;
+  var $check = $('#form__checkbox:checked');  // checkbox w pozycji checked
+  var $email = $('#inputEmail3'); // id pola input type ='e-mail'
 
 $('.again').on('click', function () {
   play();
@@ -36,7 +38,7 @@ function updatePoints() {
 
 //sterowanie na strzalkach
 $(document).keydown(function (e) {
-  $('.coin.pig', $table).removeClass('coin');
+  //$('.coin.pig', $table).removeClass('coin');
   switch (e.which) {
     case 37: // left
       if ($('.pig', $table).prev().length === 1) {    //sprawdza czy porzedni element ma długość, jeżeli by nie miał to znaczy że nie jest elementem tabeli i linijka poniżej się nie wykonuje
@@ -107,9 +109,10 @@ function play() {
       }
       $table.append($tr);
       points = 0;
-      $('table tr:nth-child(1) td:nth-child(10)').addClass('pointer').text('PUNKTY: ' + points);
-      $('table tr:nth-child(9) td:nth-child(5)').addClass('pig'); //świnia ładuje się razem z grą
     }
+    $('tr:last td', $table).addClass('no-item');
+    $('table tr:nth-child(1) td:nth-child(10)').addClass('pointer').text('PUNKTY: ' + points);
+    $('table tr:nth-child(9) td:nth-child(5)').addClass('pig'); //świnia ładuje się razem z grą
 
     setTimer();
 
@@ -139,7 +142,7 @@ function play() {
         updatePoints();
         var audio = new Audio('Oink.mp3');   // Chrum!
         audio.play();
-        $('.coin.pig', $table).removeClass('coin');
+        //$('.coin.pig', $table).removeClass('coin');
       }
     }, coinSpeed);
 
