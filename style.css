@@ -378,7 +378,7 @@ header {
 }
 .pig_img{
   z-index: 1;
-  width: 50%;
+  width: 45%;
   text-align: center;
 }
 .again{
@@ -387,6 +387,7 @@ header {
   font-size: 3rem;
   font-weight: bold;
   font-family: 'Shadows Into Light Two', cursive;
+  color: white;
 }
 .cell {
   width: 70px;
