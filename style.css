@@ -278,6 +278,67 @@ img {
 
 /*koniec sekcji Roberta*/
 
+/* sekcja gry */
+
+.game {
+  display: none;
+}
+
+#game{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cell {
+  width: 70px;
+  height: 70px;
+}
+
+.counter {
+  font-weight: 900;
+}
+
+.pointer {
+  font-weight: 900;
+  text-align: right;
+}
+
+table {
+  background-image: url(Background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.coin {
+  background-image: url("coin-zajebista.svg");
+  background-size: cover;
+
+}
+.pig {
+  background-image: url("piggy-bank.svg");
+  background-size: cover;
+}
+
+.bomb {
+  background-image: url("bomb.svg");
+}
+
+.pig.bomb {
+  background-image: url("explosion.svg");
+}
+
+.pig.coin {
+  background-image: url("sukces.svg");
+}
+
+.explosion {
+  background-image: url("explosion.svg");
+}
+
+
+
 @media screen and (max-width: 768px) {
 
   .border {
