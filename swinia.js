@@ -39,27 +39,28 @@ function updatePoints() {
   $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
 }
 
-//sterowanie na strzalkach
-$(document).keydown(function (e) {
+  //sterowanie na strzalkach
+  $(document).keydown(function(e) {
+    switch(e.which) {
+      case 37: // left
+        if ( $('.pig', $table).prev().length===1){    //sprawdza czy porzedni element ma długość, jeżeli by nie miał to znaczy że nie jest elementem tabeli i linijka poniżej się nie wykonuje
+          $('.pig', $table).removeClass('pig').prev().addClass('pig')
+        }
+        if ($('.coin.pig', $table).length > 0) {
+          updatePoints();
+          $('.coin.pig', $table).removeClass('coin');
+        }
+        break;
 
-  switch (e.which) {
-    case 37: // left
-      if ($('.pig', $table).prev().length === 1) {    //sprawdza czy porzedni element ma długość, jeżeli by nie miał to znaczy że nie jest elementem tabeli i linijka poniżej się nie wykonuje
-        $('.pig', $table).removeClass('pig').prev().addClass('pig')
-      }
-      if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
-      }
-      break;
-
-    case 39: // right
-      if ($('.pig', $table).next().length === 1) {
-        $('.pig', $table).removeClass('pig').next().addClass('pig')
-      }
-      if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
-      }
-      break;
+      case 39: // right
+        if ( $('.pig', $table).next().length===1){
+          $('.pig', $table).removeClass('pig').next().addClass('pig')
+        }
+        if ($('.coin.pig', $table).length > 0) {
+          updatePoints();
+          $('.coin.pig', $table).removeClass('coin');
+        }
+        break;
 
     default:
       return; // exit this handler for other keys
@@ -118,11 +119,12 @@ function play() {
 
     setTimer();
 
-    $('tr:nth-child(9) td', $table).on('click', function () {
-      $('.pig', $table).removeClass('pig');
-      $(this).addClass('pig');
+      $('td', $table).click(function () {
+        $('.pig', $table).removeClass('pig');
+        $('tr:nth-child(9) td', $table).eq($(this).index()).addClass('pig'); // eq zwraca n-ty element z kolekcji
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
+        $('.coin.pig', $table).removeClass('coin');
       }
     });
 
@@ -138,6 +140,7 @@ function play() {
 
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
+        $('.coin.pig', $table).removeClass('coin');
       }
     }, coinSpeed)
     makeCoin();
