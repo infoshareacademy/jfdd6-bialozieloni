@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <title>Parallax Scrolling</title>
+  <style>
+    .bgWrapper{
+      position:fixed;
+      background:url(underwater-bg.jpg) top center no-repeat;
+      height:100%;
+      width:100%;
+      top:0;
+      left:0;
+    }
+    .shark{
+      position:fixed;
+      background:url(shark.png);
+      width:250px;
+      height:187px;
+      left:50%;
+      margin-left:-600px;
+      margin-top:400px;
+    }
+    .fish{
+      position:fixed;
+      background:url(fish.png);
+      width:300px;
+      height:246px;
+      left:50%;
+      margin-left:400px;
+      margin-top:500px;
+    }
+
+  </style>
+</head>
+<body>
+
+
+<div class="bgWrapper"></div>
+<div class="shark"></div>
+<div class="fish"></div>
+<div class="mainWrapper"><!-- --></div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+
+  $(document).ready(function(){
+    $(window).bind('scroll',function(e){
+      parallaxScroll();
+    });
+
+    function parallaxScroll(){
+      var scrolledY = $(window).scrollTop();
+      $('.bgWrapper').css('background-position','center -'+((scrolledY*0.2))+'px');
+      $('.shark').css('top','-'+((scrolledY*0.5))+'px');
+      $('.fish').css('top','-'+((scrolledY*0.8))+'px');
+    }
+
+  });
+
+
+</script>
+
+<section id="img1"><p>Hello</p></section>
+<section id="img2"><p>Hello</p></section>
+</body>
+</html>
