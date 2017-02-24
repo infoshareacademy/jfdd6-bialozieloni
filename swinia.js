@@ -1,12 +1,9 @@
-var howOften = 500;
-var coinSpeed = 200;
-var points = 0;
-var $table = $('<table>');
-
-var coinsIntervalId;
-var movementIntervalId;
-var $check = $('#form__checkbox:checked');  // checkbox w pozycji checked
-var $email = $('#inputEmail3'); // id pola input type ='e-mail'
+  var howOften = 500;
+  var coinSpeed = 200;
+  var points = 0;
+  var $table = $('<table>');
+  var $tr, $td;
+  var coinsIntervalId;
 
 $('.again').on('click', function () {
   play();
@@ -140,6 +137,8 @@ function play() {
 
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
+        var audio = new Audio('Oink.mp3');   // Chrum!
+        audio.play();
         $('.coin.pig', $table).removeClass('coin');
       }
     }, coinSpeed);
