@@ -9,7 +9,7 @@ var $check = $('#form__checkbox:checked');  // checkbox w pozycji checked
 var $email = $('#inputEmail3'); // id pola input type ='e-mail'
 
 $('.again').on('click', function () {
-    play();
+  play();
 });
 
 function start(e) {
@@ -38,30 +38,29 @@ function updatePoints() {
 
 
 //sterowanie na strzalkach
-$(document).keydown(function(e) {
-    switch(e.which) {
-      case 37: // left
-        if ( $('.pig', $table).prev().length===1){    //sprawdza czy porzedni element ma długość, jeżeli by nie miał to znaczy że nie jest elementem tabeli i linijka poniżej się nie wykonuje
-          $('.pig', $table).removeClass('pig').prev().addClass('pig')
-        }
-        if ($('.coin.pig', $table).length > 0) {
-          updatePoints();
-          $('.coin.pig', $table).removeClass('coin');
-        }
-        break;
+$(document).keydown(function (e) {
+  $('.coin.pig', $table).removeClass('coin');
+  switch (e.which) {
+    case 37: // left
+      if ($('.pig', $table).prev().length === 1) {    //sprawdza czy porzedni element ma długość, jeżeli by nie miał to znaczy że nie jest elementem tabeli i linijka poniżej się nie wykonuje
+        $('.pig', $table).removeClass('pig').prev().addClass('pig')
+      }
+      if ($('.coin.pig', $table).length > 0) {
+        updatePoints();
+      }
+      break;
 
-      case 39: // right
-        if ( $('.pig', $table).next().length===1){
-          $('.pig', $table).removeClass('pig').next().addClass('pig')
-        }
-        if ($('.coin.pig', $table).length > 0) {
-          updatePoints();
-          $('.coin.pig', $table).removeClass('coin');
-        }
-        break;
-      default:
-        return; // exit this handler for other keys
-    }
+    case 39: // right
+      if ($('.pig', $table).next().length === 1) {
+        $('.pig', $table).removeClass('pig').next().addClass('pig')
+      }
+      if ($('.coin.pig', $table).length > 0) {
+        updatePoints();
+      }
+      break;
+    default:
+      return; // exit this handler for other keys
+  }
   e.preventDefault(); // prevent the default action (scroll / move caret)
 });
 
@@ -71,7 +70,7 @@ function setTimer() {
 
   function timer() {
     count -= 1;
-    var minutes = Math.floor(count / 60);
+
     var sec = count % 60;
     if (sec < 10) {
       sec = '0' + sec;
@@ -92,13 +91,13 @@ function startItemsGenerator() {
   coinsIntervalId = setInterval(function () {
     $('tr:first td', $table)
       .eq(Math.floor(Math.random() * 10))
-      .addClass(Math.random() > 0.2 ? 'coin': 'bomb');
+      .addClass(Math.random() > 0.2 ? 'coin' : 'bomb');
   }, howOften);
 }
 
 function play() {
   $(document).ready(function () {
-      var $td, $tr;
+    var $td, $tr;
     $('.gameover').hide();
     $('.game').append($table.empty());
 
@@ -112,24 +111,19 @@ function play() {
       $table.append($tr);
       points = 0;
       $('table tr:nth-child(1) td:nth-child(10)').addClass('pointer').text('PUNKTY: ' + points);
-      $('table tr:nth-child(9) td:nth-child(5)').addClass('pig') //świnia ładuje się razem z grą
+      $('table tr:nth-child(9) td:nth-child(5)').addClass('pig'); //świnia ładuje się razem z grą
     }
 
     setTimer();
 
-      $('td', $table).click(function () {
-        $('.pig', $table).removeClass('pig');
-        $('tr:nth-child(9) td', $table).eq($(this).index()).addClass('pig'); // eq zwraca n-ty element z kolekcji
+    $('td', $table).click(function () {
+      $('.pig', $table).removeClass('pig');
+      $('tr:nth-child(9) td', $table).eq($(this).index()).addClass('pig'); // eq zwraca n-ty element z kolekcji
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
         $('.coin.pig', $table).removeClass('coin');
       }
     });
-
-    function below(node) {
-      return $(node).parent().next().find(':nth-child(' + ($(node).index() + 1) + ')');
-    }
-
 
     function move(what, replacement) {
       $('.' + what, $table).each(function () {
@@ -146,9 +140,10 @@ function play() {
 
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
-          $('.coin.pig', $table).removeClass('coin');
+        $('.coin.pig', $table).removeClass('coin');
       }
     }, coinSpeed);
+
     startItemsGenerator();
   });
 }
