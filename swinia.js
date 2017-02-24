@@ -95,9 +95,9 @@
 
     setTimer();
 
-    $('tr:nth-child(9) td', $table).on('click', function () {
-      $('.pig', $table).removeClass('pig');
-      $(this).addClass('pig');
+      $('td', $table).click(function () {
+        $('.pig', $table).removeClass('pig');
+        $('tr:nth-child(9) td', $table).eq($(this).index()).addClass('pig'); // eq zwraca n-ty element z kolekcji
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
         $('.coin.pig', $table).removeClass('coin');
@@ -107,6 +107,7 @@
     function below(node) {
       return $(node).parent().next().find(':nth-child(' + ($(node).index() + 1) + ')');
     }
+
 
     setInterval(function () {
       $('.coin', $table).each(function () {
