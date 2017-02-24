@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,900&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mystery+Quest|Shadows+Into+Light+Two|Shojumaru" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -117,20 +118,29 @@
   </div>
 </section>
 
-<section class="container game">
-  <div id="timer"></div>
+<section class="container gameover" id="gameover">
+  <div class="row">
+  <div class="bravo col-md-offset-3 col-md-6 col-md-offset-3">BRAWO!</div>
+  </div>
+  <div class="row">
+  <div class="points col-md-offset-3 col-md-6 col-md-offset-3"></div></div>
+  <div class="row">
+  <div class="pig_img col-md-offset-3 col-md-6 col-md-offset-3"><img src="pig__img.png" class="pig_img" alt=""></div></div>
+  <div class="row">
+    <div class="btn-lg again col-md-offset-3 col-md-6 col-md-offset-3">ZAGRAJ PONOWNIE</div>
+  </div>
 </section>
 
-
-
-<section class="container" id="gameover">Twój wynik to: 56!</section>
+<section class="game">
+  <div id="timer"></div>
+</section>
 
 <section class="form container" id="form">
 
   <div class="row">
 
     <div class="div1 col-xs-12 col-md-6">
-      <img src="newsletter.jpg" alt="newsletter">
+      <img src="newsletter.jpg" class="stamp" alt="newsletter">
     </div>
     <div class="div2 col-xs-12 col-md-6">
       <div class="well border"><h1>Zapisz się na premierę!</h1><br>
@@ -138,7 +148,7 @@
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">E-mail</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Twój adres e-mail">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Twój adres e-mail" value="">
             </div>
           </div>
 
@@ -146,7 +156,7 @@
             <div class="col-sm-offset-2 col-sm-10">
               <div class="checkbox">
                 <label class="form-declaration">
-                  <input type="checkbox" required> Wyrażam zgodę na przetwarzanie moich danych osobowych do celów marketingowych
+                  <input type="checkbox" required id="form__checkbox"> Wyrażam zgodę na przetwarzanie moich danych osobowych do celów marketingowych
                   zgodnie z Ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz.U. nr 133, poz. 883), a
                   także wyrażam zgodę na otrzymywanie informacji handlowych środkami komunikacji elektronicznej
                   wysyłanymi przez GWCalc Sp. z o.o. oraz na wykorzystanie komunikacji email w celach marketingowych.<br>
