@@ -32,8 +32,10 @@ html, body {
 /*sekcja Janka*/
 
 header {
+  background-attachment: fixed; /* potrzebne do paralaxy*/
   background-image: url(zajawka2.jpg);
   background-size: cover;
+  background-position: top; /* potrzebne do paralaxy*/
   height: 100vh;
 
 }
@@ -46,23 +48,23 @@ header {
   height: 100vh;
 }
 
-.zajawka-nazwa {
+.zajawka-nazwa{
   display: inline-block;
   font-family: 'Raleway', sans-serif;
-  font-size: 25vh;
+  font-size: 20vmin;
   font-weight: bold;
   color: green;
 }
 
-.zajawka-obrazek {
+.zajawka-obrazek{
   width: auto;
-  height: 20vh;
+  height: 17vmin;
 }
 
 .zajawka-opis {
   font-family: 'Roboto', sans-serif;
   color: green;
-  font-size: 3vh;
+  font-size: 3vmin;
   font-weight: bold;
 }
 
@@ -99,15 +101,15 @@ header {
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
 
   .zajawka-nazwa {
-    font-size: 15vh;
+    font-size: 15vmin;
   }
 
   .zajawka-obrazek {
 
-    height: 12vh;
+    height: 12vmin;
   }
 
   .logo {
@@ -118,14 +120,14 @@ header {
   }
 
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 640px){
   .zajawka-nazwa {
-    font-size: 8vh;
+    font-size: 10vmin;
   }
 
   .zajawka-obrazek {
 
-    height: 6vh;
+    height: 8vmin;
   }
 
 }
@@ -190,6 +192,7 @@ header {
   font-size: 2rem;
 }
 
+
 /*koniec sekcji Bartka*/
 
 /*Sekcja Tomka */
@@ -197,15 +200,15 @@ header {
 .form {
   background-color: rgb(255, 255, 255);
   width: 100%;
-  height: 100vh;
+  height: auto;
   position: relative;
-  padding-top: 100px;
+
 }
 
-img {
+.stamp {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+
 }
 
 .control-label {
@@ -231,8 +234,69 @@ img {
 
 .div1 {
   padding-right: 0;
+  padding-left: 0;
 }
 
+.additional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("additional.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.addiitional__form{
+  display: flex;
+  flex-direction: row;
+
+}
+.additional__items1 {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.additional__items2 {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 5%;
+}
+.additional__items-func {
+  flex-direction: row;
+  font-size: 2rem;
+  color: white;
+  justify-content: space-between;
+}
+
+.additional__items-func p{
+ font-size: 2.4rem;
+  padding: 10px;
+}
+.items__icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.item__icons-mod {
+  width: 98px;
+  max-height: 96px;
+}
+
+.addiitional__form__why h1 {
+  color: white;
+  font-size: 5rem;
+}
+
+#game {
+  display: none;
+}
+#gameover {
+  display: none;
+}
 
 
 /*koniec sekcji Tomka*/
@@ -289,8 +353,44 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+  position: relative;
 
+}
+.gameover{
+  position: absolute;
+  width: 100%;
+  height: 85vh;
+
+}
+.bravo {
+  text-align: center;
+  font-size: 12rem;
+  color: black;
+  padding-top: 3%;
+  z-index: 1;
+  font-family: 'Mystery Quest', cursive;
+
+}
+.points {
+  font-size: 5rem;
+  color: black;
+  z-index: 1;
+  text-align: center;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+.pig_img{
+  z-index: 1;
+  width: 45%;
+  text-align: center;
+}
+.again{
+  z-index: 1;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Shadows Into Light Two', cursive;
+  color: white;
+}
 .cell {
   width: 70px;
   height: 70px;
@@ -311,6 +411,14 @@ table {
   background-position: center;
 }
 
+.bomb {
+  background-image: url("bomb.svg");
+}
+
+.pig.bomb {
+  background-image: url("explosion.svg");
+}
+
 .coin {
   background-image: url("coin-zajebista.svg");
   background-size: cover;
@@ -321,14 +429,6 @@ table {
   background-size: cover;
 }
 
-.bomb {
-  background-image: url("bomb.svg");
-}
-
-.pig.bomb {
-  background-image: url("explosion.svg");
-}
-
 .pig.coin {
   background-image: url("sukces.svg");
 }
@@ -336,7 +436,6 @@ table {
 .explosion {
   background-image: url("explosion.svg");
 }
-
 
 
 @media screen and (max-width: 768px) {
@@ -373,11 +472,45 @@ table {
   .control-label {
     font-size: larger;
   }
+  .addiitional__form {
+    flex-wrap: wrap;
+  }
+  .additional__items1{
+    padding-bottom: 0;
+  }
+  .additional__items2{
+    padding-top: 0;
+  }
 }
 
 @media screen and (min-width: 1201px) {
 
   .border {
     padding-bottom: vh;
+  }
+
+}
+@media screen and (max-width: 768px) {
+
+  .additional__items-func p {
+    font-size: 2rem;
+  }
+  .item__icons-mod {
+    width: calc(98px /2);
+    max-height: calc(96px /2);
+  }
+  .addiitional__form__why h1 {
+      font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .additional__items-func p {
+    font-size: 1.5rem;
+  }
+
+  .addiitional__form__why h1 {
+    font-size: 3rem;
   }
 }

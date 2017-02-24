@@ -14,9 +14,11 @@
     background-size: cover;
 
   }
+
 </style>
 <div id="timer"></div>
 <div id="app"></div>
+<div id="endgame" class="gameover"></div>
 <script src="js/jquery-3.1.1.min.js"></script>
 <script>
   var howOften = Math.random() * 1800;
@@ -77,13 +79,39 @@
         $tr.append($td);
       }
       $table.append($tr);
+      $('table tr:nth-child(10) td:nth-child(5)').addClass('pig') //świnia ładuje się razem z grą
     }
 
     setTimer();
 
-    $('tr:last td', $table).on('click', function() {
+    $('tr:last td', $table).on('click', function() { //wszystkie td z ostatniego tr w $table, wyszukiwać po index aby działało klikanie kolumn
       $('.pig', $table).removeClass('pig');
       $(this).addClass('pig');
+    });
+
+    $(, $table).on('click', function() {
+      $('.pig', $table).removeClass('pig');
+      $(this).addClass('pig');
+    });
+
+//sterowanie na strzalkach
+    $(document).keydown(function(e) {
+      switch(e.which) {
+        case 37: // left
+            if ( $('.pig', $table).prev().length===1){    //sprawdza czy porzedni element ma długość, jeżeli by nie miał to znaczy że nie jest elementem tabeli i linijka poniżej się nie wykonuje
+              $('.pig', $table).removeClass('pig').prev().addClass('pig')
+            }
+          break;
+
+        case 39: // right
+          if ( $('.pig', $table).next().length===1){
+            $('.pig', $table).removeClass('pig').next().addClass('pig')
+          }
+          break;
+
+        default: return; // exit this handler for other keys
+      }
+      e.preventDefault(); // prevent the default action (scroll / move caret)
     });
 
     function below(node) {return $(node).parent().next().find(':nth-child('+ ($(node).index() + 1) +')');}
