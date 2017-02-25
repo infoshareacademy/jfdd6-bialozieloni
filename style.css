@@ -2,20 +2,23 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 /*sekcja Roberta*/
 
 .navbar-inverse {
   background: #85bb65;
-  border: green;
 }
 
-.navbar-inverse
-.navbar-brand {
+.navbar-inverse .navbar-brand {
   color: black;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
 }
 
-.navbar-inverse
-.navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a {
   color: black;
 }
 
@@ -27,6 +30,10 @@ html, body {
   background-color: white;
 }
 
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: white;
+  background-color: green;
+}
 /* koniec sekcji Roberta*/
 
 /*sekcja Janka*/

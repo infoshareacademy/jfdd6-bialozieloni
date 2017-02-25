@@ -28,6 +28,16 @@ $('.nav-team').on('click', function (event) {
   }, 1000);
 });
 
+$('.nav-additional').on('click', function (event) {
+  event.preventDefault();
+  var p = $('#additional');
+  var offset = p.offset().top;
+
+  $('html, body').animate({
+    scrollTop: offset
+  }, 1000);
+});
+
 $('.navbar-brand').on('click', function (event) {
   event.preventDefault();
 
