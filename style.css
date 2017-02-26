@@ -2,20 +2,27 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 /*sekcja Roberta*/
 
 .navbar-inverse {
   background: #85bb65;
-  border: green;
 }
 
-.navbar-inverse
-.navbar-brand {
+.navbar-inverse .navbar-brand {
   color: black;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
 }
 
-.navbar-inverse
-.navbar-nav > li > a {
+.nav>li.nav-game{
+  display: none;
+}
+
+.navbar-inverse .navbar-nav > li > a {
   color: black;
 }
 
@@ -26,6 +33,20 @@ html, body {
 .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
   background-color: white;
 }
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: white;
+  background-color: green;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-brand:focus {
+  color: black;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-brand:hover {
+  color: white;
+}
+
 
 /* koniec sekcji Roberta*/
 
@@ -202,6 +223,7 @@ header {
   width: 100%;
   height: auto;
   position: relative;
+  padding-top: 50px;
 
 }
 
@@ -293,6 +315,7 @@ header {
 
 #game {
   display: none;
+  background-color: #D9F1F7;
 }
 #gameover {
   display: none;
@@ -306,6 +329,7 @@ header {
 .team {
   background: url(123.jpg);
   background-size: cover;
+  padding-top: 50px;
 }
 
 .team-member-photo {
@@ -354,8 +378,9 @@ header {
   align-items: center;
   flex-direction: column;
   position: relative;
-
+  padding: 50px 0;
 }
+
 .gameover{
   position: absolute;
   width: 100%;

@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar">
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -28,9 +28,11 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-functions"><a href="#functions">Dlaczego my?</a></li>
-        <li class="nav-form"><a href="#form">Premiera</a></li>
-        <li class="nav-team"><a href="#team">Zespół</a></li>
+        <li class="nav-functions"><a href="#functions">DLACZEGO MY?</a></li>
+        <li class="nav-form"><a href="#form">PREMIERA</a></li>
+        <li id ="nav-game" class="nav-game"><a href="#game">GRA</a></li>
+        <li class="nav-team"><a href="#team">ZESPÓŁ</a></li>
+        <li class="nav-additional"><a href="#additional">JAK TO DZIAŁA?</a></li>
       </ul>
     </div>
   </div>
@@ -132,7 +134,7 @@
 </section>
 
 <section class="game">
-  <div id="timer"></div>
+
 </section>
 
 <section class="form container" id="form">

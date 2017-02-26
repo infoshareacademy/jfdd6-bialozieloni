@@ -16,6 +16,8 @@ function start(e) {
 
   if ($check && $email.val() !== '') {
     $('#form').hide();
+    $('.nav-form').hide();
+    $('#nav-game').show();
     $('.game').attr('id', 'game');
     $('.game').show('slow', play);
 
@@ -31,6 +33,8 @@ function below(node) {
 
 function updatePoints() {
   points += 1;
+  var audio = new Audio('Oink.mp3');   // Chrum!
+  audio.play();
   $('.points').text('Liczba zdobytych punktów: ' + points);
   $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
 }
@@ -140,8 +144,6 @@ function play() {
 
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
-        var audio = new Audio('Oink.mp3');   // Chrum!
-        audio.play();
         //$('.coin.pig', $table).removeClass('coin');
       }
     }, coinSpeed);
