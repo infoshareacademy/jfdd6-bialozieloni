@@ -69,7 +69,7 @@ function updatePoints() {
 });
 
 function setTimer() {
-  var count = 5;
+  var count = 30;
   var counter = setInterval(timer, 1000);
 
   function timer() {

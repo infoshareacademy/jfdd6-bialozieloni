@@ -379,6 +379,11 @@ header {
   font-family: 'Shadows Into Light Two', cursive;
 }
 .pig_img{
+  margin-left: 5%;
+  width: 350px;
+  text-align: center;
+}
+.pig_div{
   z-index: 1;
   width: 45%;
   text-align: center;
@@ -469,15 +474,22 @@ table {
   .additional__items2{
     padding-top: 0;
   }
-}
-
-@media screen and (min-width: 1201px) {
-
-  .border {
-    padding-bottom: vh;
+  .points {
+    font-size: 3.5rem;
   }
-
 }
+
+@media screen and (max-width: 992px) {
+
+  .pig_img{
+    margin-left: 70%;
+    width: 90%;
+  }
+  .again{
+    margin-top: 5%;
+  }
+}
+
 @media screen and (max-width: 768px) {
 
   .additional__items-func p {
