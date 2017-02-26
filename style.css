@@ -416,6 +416,14 @@ table {
   background-position: center;
 }
 
+.bomb {
+  background-image: url("bomb.svg");
+}
+
+.pig.bomb {
+  background-image: url("explosion.svg");
+}
+
 .coin {
   background-image: url("coin-zajebista.svg");
   background-size: cover;
@@ -428,6 +436,14 @@ table {
 
 .pig.coin {
   background-image: url("sukces.svg");
+}
+
+.explosion {
+  background-image: url("explosion.svg");
+}
+
+.no-item {
+  background: none;
 }
 
 
