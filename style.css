@@ -18,6 +18,10 @@ body {
   font-weight: 900;
 }
 
+.nav>li.nav-game{
+  display: none;
+}
+
 .navbar-inverse .navbar-nav > li > a {
   color: black;
 }
@@ -34,6 +38,16 @@ body {
   color: white;
   background-color: green;
 }
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-brand:focus {
+  color: black;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-brand:hover {
+  color: white;
+}
+
+
 /* koniec sekcji Roberta*/
 
 /*sekcja Janka*/
@@ -209,6 +223,7 @@ header {
   width: 100%;
   height: auto;
   position: relative;
+  padding-top: 50px;
 
 }
 
@@ -300,6 +315,7 @@ header {
 
 #game {
   display: none;
+  background-color: #D9F1F7;
 }
 #gameover {
   display: none;
@@ -313,6 +329,7 @@ header {
 .team {
   background: url(123.jpg);
   background-size: cover;
+  padding-top: 50px;
 }
 
 .team-member-photo {
@@ -361,8 +378,9 @@ header {
   align-items: center;
   flex-direction: column;
   position: relative;
-
+  padding: 50px 0;
 }
+
 .gameover{
   position: absolute;
   width: 100%;

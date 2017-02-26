@@ -18,6 +18,16 @@ $('.nav-form').on('click', function (event) {
   }, 1000);
 });
 
+$('.nav-game').on('click', function (event) {
+  event.preventDefault();
+  var p = $('#game');
+  var offset = p.offset().top;
+
+  $('html, body').animate({
+    scrollTop: offset
+  }, 1000);
+});
+
 $('.nav-team').on('click', function (event) {
   event.preventDefault();
   var p = $('#team');
