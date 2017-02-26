@@ -457,6 +457,10 @@ table {
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 1250px) {
+.points {
+  font-size: 3.5rem;
+}
 
 @media screen and (max-width: 1200px) {
   .div1 {
@@ -490,9 +494,7 @@ table {
   .additional__items2{
     padding-top: 0;
   }
-  .points {
-    font-size: 3.5rem;
-  }
+
 }
 
 @media screen and (max-width: 992px) {
