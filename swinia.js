@@ -32,20 +32,23 @@ function below(node) {
   return $(node).parent().next().find(':nth-child(' + ($(node).index() + 1) + ')');
 }
 
-function updatePoints() {
-  points += 1;
-  var audio = new Audio('Oink.mp3');   // Chrum!
-  audio.play();
+function showPoints() {
   $('.points').text('Liczba zdobytych punktów: ' + points);
   $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
 }
 
-  function removePoints() {
+function addPoint() {
+  points += 1;
+  var audio = new Audio('Oink.mp3');   // Chrum!
+  audio.play();
+  showPoints();
+}
+
+  function removePoint() {
     points -= 1;
     var audio = new Audio('Boom.mp3');   // Boom!
     audio.play();
-    $('.points').text('Liczba zdobytych punktów: ' + points);
-    $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
+    showPoints();
   }
 
 //sterowanie na strzalkach
@@ -57,10 +60,10 @@ $(document).keydown(function (e) {
         $('.pig', $table).removeClass('pig').prev().addClass('pig')
       }
       if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
+        addPoint();
       }
       if ($('.bomb.pig', $table).length > 0) {
-        removePoints();
+        removePoint();
       }
       break;
 
@@ -69,10 +72,10 @@ $(document).keydown(function (e) {
         $('.pig', $table).removeClass('pig').next().addClass('pig')
       }
       if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
+        addPoint();
       }
       if ($('.bomb.pig', $table).length > 0) {
-        removePoints();
+        removePoint();
       }
       break;
     default:
@@ -138,11 +141,11 @@ function play() {
       $('.pig', $table).removeClass('pig');
       $('tr:nth-child(9) td', $table).eq($(this).index()).addClass('pig'); // eq zwraca n-ty element z kolekcji
       if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
+        addPoint();
         $('.coin.pig', $table).removeClass('coin');
       }
       if ($('.bomb.pig', $table).length > 0) {
-        removePoints();
+        removePoint();
       }
     });
 
@@ -156,15 +159,15 @@ function play() {
     }
 
     movementIntervalId = setInterval(function () {
-      move('coin', 'sad');
+      move('coin');
       move('bomb', 'explosion');
 
       if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
+        addPoint();
         //$('.coin.pig', $table).removeClass('coin');
       }
       if ($('.bomb.pig', $table).length > 0) {
-        removePoints();
+        removePoint();
       }
     }, coinSpeed);
 
