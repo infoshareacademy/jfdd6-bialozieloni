@@ -39,6 +39,11 @@ function updatePoints() {
   $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
 }
 
+  function removePoints() {
+    points -= 1;
+    $('.points').text('Liczba zdobytych punktów: ' + points);
+    $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
+  }
 
 //sterowanie na strzalkach
 $(document).keydown(function (e) {
@@ -51,6 +56,9 @@ $(document).keydown(function (e) {
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
       }
+      if ($('.bomb.pig', $table).length > 0) {
+        removePoints();
+      }
       break;
 
     case 39: // right
@@ -59,6 +67,9 @@ $(document).keydown(function (e) {
       }
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
+      }
+      if ($('.bomb.pig', $table).length > 0) {
+        removePoints();
       }
       break;
     default:
@@ -127,6 +138,9 @@ function play() {
         updatePoints();
         $('.coin.pig', $table).removeClass('coin');
       }
+      if ($('.bomb.pig', $table).length > 0) {
+        removePoints();
+      }
     });
 
     function move(what, replacement) {
@@ -145,6 +159,9 @@ function play() {
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
         //$('.coin.pig', $table).removeClass('coin');
+      }
+      if ($('.bomb.pig', $table).length > 0) {
+        removePoints();
       }
     }, coinSpeed);
 
