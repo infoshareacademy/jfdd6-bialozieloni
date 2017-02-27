@@ -267,6 +267,7 @@ header {
   background-image: url("img/additional-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 100vh;
 }
 

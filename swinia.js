@@ -7,10 +7,12 @@
   var $check = $('#form__checkbox:checked');  // checkbox w pozycji checked
   var $email = $('#inputEmail3'); // id pola input type ='e-mail'
 
+
+// PONOWNE URUCHOMIENIE GRY
 $('.again').on('click', function () {
   play();
 });
-
+// ROZPOCZĘCIE GRY
 function start(e) {
   e.preventDefault();
 
@@ -24,7 +26,7 @@ function start(e) {
 
   }
 }
-
+//NA KLIKNIĘCIE PRZYCISKU ZAPISZ MNIE PRZECHODZI DO ROZPOCZĘCIA GRY
 $('.form-horizontal').submit(start);
 
 
@@ -32,11 +34,13 @@ function below(node) {
   return $(node).parent().next().find(':nth-child(' + ($(node).index() + 1) + ')');
 }
 
+
+
 function showPoints() {
   $('.points').text('Liczba zdobytych punktów: ' + points);
   $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
 }
-
+  // LICZNIK PUNKTÓW SKORELOWANE Z DZWIĘKIEM SUKCESU
 function addPoint() {
   points += 1;
   var audio = new Audio('Oink.mp3');   // Chrum!
@@ -51,7 +55,7 @@ function addPoint() {
     showPoints();
   }
 
-//sterowanie na strzalkach
+//STEROWANIE ŚWINIĄ ZA POMOCĄ KURSORÓW
 $(document).keydown(function (e) {
   //$('.coin.pig', $table).removeClass('coin');
   switch (e.which) {
@@ -84,6 +88,7 @@ $(document).keydown(function (e) {
   e.preventDefault(); // prevent the default action (scroll / move caret)
 });
 
+  // USTAWIENIE TIMERA
 function setTimer() {
   var count = 30;
   var counter = setInterval(timer, 1000);
@@ -95,7 +100,7 @@ function setTimer() {
     if (sec < 10) {
       sec = '0' + sec;
     }
-
+//CZYSZCZENIE INTERWAŁU I POJAWIENIE SIĘ GAMEOVER
     var out = "CZAS: 00:" + sec;
     $('table tr:nth-child(1) td:nth-child(1)').addClass('counter').html(out);
     if (count == 0) {
@@ -106,7 +111,7 @@ function setTimer() {
     }
   }
 }
-
+  // GENERACJA LOSOWA MONET/BOMB PRZY POMOCY INSTRUKCJI WARUNKOWEJ IF W ZMIENNYCH PROPORCJACH
 function startItemsGenerator() {
   coinsIntervalId = setInterval(function () {
     $('tr:first td', $table)
@@ -114,12 +119,14 @@ function startItemsGenerator() {
       .addClass(Math.random() > 0.2 ? 'coin' : 'bomb');
   }, howOften);
 }
-
+  // FUNKCJA PLAY OBEJMUJĄCA CAŁY KOD
 function play() {
   $(document).ready(function () {
     var $td, $tr;
     $('.gameover').hide();
     $('.game').append($table.empty());
+
+//TWORZENIE PLANSZY ZA POMOCĄ TABELKI
 
     for (var y = 0; y < 10; y += 1) {
       $tr = $('<tr>');
@@ -131,15 +138,17 @@ function play() {
       $table.append($tr);
       points = 0;
     }
+    // DODAJE ŚWINIĘ W WYZNACZONYM MIEJSCU ORAZ LICZNIK PUNKTÓW
     $('tr:last td', $table).addClass('no-item');
     $('table tr:nth-child(1) td:nth-child(10)').addClass('pointer').text('PUNKTY: ' + points);
     $('table tr:nth-child(9) td:nth-child(5)').addClass('pig'); //świnia ładuje się razem z grą
 
     setTimer();
-
+// PORUSZANIE SIĘ ŚWINI ZA POMOCĄ MYSZKI
     $('td', $table).click(function () {
       $('.pig', $table).removeClass('pig');
       $('tr:nth-child(9) td', $table).eq($(this).index()).addClass('pig'); // eq zwraca n-ty element z kolekcji
+// UPDATE PUNKTÓW PRZY STEROWANIU ZA POMOCĄ MYSZKI
       if ($('.coin.pig', $table).length > 0) {
         addPoint();
         $('.coin.pig', $table).removeClass('coin');
@@ -148,7 +157,7 @@ function play() {
         removePoint();
       }
     });
-
+//RUCH OBIEKTÓW W PIONIE
     function move(what, replacement) {
       $('.' + what, $table).each(function () {
         $(this).removeClass(what);
@@ -161,11 +170,12 @@ function play() {
     movementIntervalId = setInterval(function () {
       move('coin');
       move('bomb', 'explosion');
-
+//DODAWANIE PUNKTÓW GDY ŚWINIA SPOTKA MONETĘ
       if ($('.coin.pig', $table).length > 0) {
         addPoint();
-        //$('.coin.pig', $table).removeClass('coin');
+
       }
+      //ODEJMOWANIE PUNKTÓW GDY ŚWINIA SPOTKA BOMBĘ
       if ($('.bomb.pig', $table).length > 0) {
         removePoint();
       }
