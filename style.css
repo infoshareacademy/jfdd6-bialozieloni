@@ -443,29 +443,29 @@ table {
 }
 
 .bomb {
-  background-image: url("bomb.svg");
+  background-image: url("img/bomb.svg");
 }
 
 .pig.bomb {
-  background-image: url("explosion.svg");
+  background-image: url("img/explosion.svg");
 }
 
 .coin {
-  background-image: url("coin-zajebista.svg");
+  background-image: url("img/coin-zajebista.svg");
   background-size: cover;
 
 }
 .pig {
-  background-image: url("piggy-bank.svg");
+  background-image: url("img/piggy-bank.svg");
   background-size: cover;
 }
 
 .pig.coin {
-  background-image: url("sukces.svg");
+  background-image: url("img/sukces.svg");
 }
 
 .explosion {
-  background-image: url("explosion.svg");
+  background-image: url("img/explosion.svg");
 }
 
 .no-item {

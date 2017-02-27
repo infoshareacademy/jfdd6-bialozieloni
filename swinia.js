@@ -18,6 +18,7 @@ function start(e) {
     $('#form').hide();
     $('.nav-form').hide();
     $('#nav-game').show();
+    $('.btn-zaj').hide();
     $('.game').attr('id', 'game');
     $('.game').show('slow', play);
 
