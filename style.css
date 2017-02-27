@@ -446,6 +446,14 @@ table {
   background-image: url("img/bomb.svg");
 }
 
+.bomb2 {
+  background-image: url("img/bomb2.svg");
+}
+
+.pig.bomb2 {
+  background-image: url("img/explosion.svg");
+}
+
 .pig.bomb {
   background-image: url("img/explosion.svg");
 }

@@ -108,7 +108,7 @@ function startItemsGenerator() {
   coinsIntervalId = setInterval(function () {
     $('tr:first td', $table)
       .eq(Math.floor(Math.random() * 10))
-      .addClass(Math.random() > 0.2 ? 'coin' : 'bomb');
+      .addClass(Math.random() > 0.2 ? 'coin' : ((Math.random() > 0.49 ? 'bomb' : 'bomb2')));
   }, howOften);
 }
 
@@ -156,8 +156,9 @@ function play() {
     }
 
     movementIntervalId = setInterval(function () {
-      move('coin', 'sad');
+      move('coin');
       move('bomb', 'explosion');
+      move('bomb2', 'explosion');
 
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
