@@ -11,7 +11,7 @@ $(window).on('scroll', function () {
   var p = $('#team');
   var offset = p.offset().top;
   var scrollTop = $(window).scrollTop();
-  if (scrollTop > offset) {
-    $('.team-member-photo').addClass("animated rotateIn");
+  if (scrollTop > (offset - window.outerHeight/2)) {
+    $('.team-member-photo').addClass( "animated rotateIn");
   }
 });
