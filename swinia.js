@@ -33,21 +33,26 @@ $('.form-horizontal').submit(start);
 function below(node) {
   return $(node).parent().next().find(':nth-child(' + ($(node).index() + 1) + ')');
 }
-// LICZNIK PUNKTÓW SKORELOWANE Z DZWIĘKIEM SUKCESU
-function updatePoints() {
-  points += 1;
-  var audio = new Audio('Oink.mp3');   // Chrum!
-  audio.play();
+
+
+
+function showPoints() {
   $('.points').text('Liczba zdobytych punktów: ' + points);
   $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
 }
+  // LICZNIK PUNKTÓW SKORELOWANE Z DZWIĘKIEM SUKCESU
+function addPoint() {
+  points += 1;
+  var audio = new Audio('Oink.mp3');   // Chrum!
+  audio.play();
+  showPoints();
+}
 
-  function removePoints() {
+  function removePoint() {
     points -= 1;
     var audio = new Audio('Boom.mp3');   // Boom!
     audio.play();
-    $('.points').text('Liczba zdobytych punktów: ' + points);
-    $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
+    showPoints();
   }
 
 //STEROWANIE ŚWINIĄ ZA POMOCĄ KURSORÓW
@@ -59,10 +64,10 @@ $(document).keydown(function (e) {
         $('.pig', $table).removeClass('pig').prev().addClass('pig')
       }
       if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
+        addPoint();
       }
       if ($('.bomb.pig', $table).length > 0) {
-        removePoints();
+        removePoint();
       }
       break;
 
@@ -71,10 +76,10 @@ $(document).keydown(function (e) {
         $('.pig', $table).removeClass('pig').next().addClass('pig')
       }
       if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
+        addPoint();
       }
       if ($('.bomb.pig', $table).length > 0) {
-        removePoints();
+        removePoint();
       }
       break;
     default:
@@ -145,11 +150,11 @@ function play() {
       $('tr:nth-child(9) td', $table).eq($(this).index()).addClass('pig'); // eq zwraca n-ty element z kolekcji
 // UPDATE PUNKTÓW PRZY STEROWANIU ZA POMOCĄ MYSZKI
       if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
+        addPoint();
         $('.coin.pig', $table).removeClass('coin');
       }
       if ($('.bomb.pig', $table).length > 0) {
-        removePoints();
+        removePoint();
       }
     });
 //RUCH OBIEKTÓW W PIONIE
@@ -168,10 +173,12 @@ function play() {
 //DODAWANIE PUNKTÓW GDY ŚWINIA SPOTKA MONETĘ
       if ($('.coin.pig', $table).length > 0) {
         updatePoints();
+        addPoint();
+
       }
       //ODEJMOWANIE PUNKTÓW GDY ŚWINIA SPOTKA BOMBĘ
       if ($('.bomb.pig', $table).length > 0) {
-        removePoints();
+        removePoint();
       }
     }, coinSpeed);
 
