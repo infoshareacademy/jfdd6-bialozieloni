@@ -172,7 +172,6 @@ function play() {
       move('bomb', 'explosion');
 //DODAWANIE PUNKTÓW GDY ŚWINIA SPOTKA MONETĘ
       if ($('.coin.pig', $table).length > 0) {
-        updatePoints();
         addPoint();
 
       }
