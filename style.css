@@ -335,6 +335,7 @@ header {
 .team-member-photo {
   filter: grayscale(1);
   margin: 50px auto auto;
+  animation-duration: 2s;
 }
 
 .team-member-name {
