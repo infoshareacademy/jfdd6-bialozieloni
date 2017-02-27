@@ -41,6 +41,8 @@ function updatePoints() {
 
   function removePoints() {
     points -= 1;
+    var audio = new Audio('Boom.mp3');   // Boom!
+    audio.play();
     $('.points').text('Liczba zdobytych punktów: ' + points);
     $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
   }
