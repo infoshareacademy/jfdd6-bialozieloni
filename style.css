@@ -314,14 +314,6 @@ header {
   font-size: 5rem;
 }
 
-#game {
-  display: none;
-  background-color: #D9F1F7;
-}
-#gameover {
-  display: none;
-}
-
 
 /*koniec sekcji Tomka*/
 
@@ -381,60 +373,26 @@ header {
   flex-direction: column;
   position: relative;
   padding: 50px 0;
+  background-color: #D9F1F7;
 }
 
-.gameover{
-  position: absolute;
-  width: 100%;
-  height: 85vh;
-
-}
-.bravo {
-  text-align: center;
-  font-size: 12rem;
-  color: black;
-  padding-top: 3%;
-  z-index: 1;
-  font-family: 'Mystery Quest', cursive;
-
-}
-.points {
-  font-size: 5rem;
-  color: black;
-  z-index: 1;
-  text-align: center;
-  font-family: 'Shadows Into Light Two', cursive;
-}
-.pig_img{
-  margin-left: 5%;
-  width: 350px;
-  text-align: center;
-}
-.pig_div{
-  z-index: 1;
-  width: 45%;
-  text-align: center;
-}
-.again{
-  z-index: 1;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  font-family: 'Shadows Into Light Two', cursive;
-  color: white;
-}
 .cell {
-  width: 70px;
-  height: 70px;
+  width: 8vh;
+  height: 8vh;
 }
 
-.counter {
+.time-counter{
   font-weight: 900;
+  color: red;
+  position: absolute;
+  top: 50px;
+  animation-duration: 0.3s;
 }
 
-.pointer {
+.points-counter {
   font-weight: 900;
-  text-align: right;
+  position: absolute;
+  top: 70px;
 }
 
 table {
@@ -445,34 +403,80 @@ table {
 
 .bomb {
   background-image: url("img/bomb.svg");
+  background-repeat: no-repeat;
 }
 
 .pig.bomb {
   background-image: url("img/explosion.svg");
+  background-repeat: no-repeat;
 }
 
 .coin {
   background-image: url("img/coin-zajebista.svg");
-  background-size: cover;
-
-}
-.pig {
-  background-image: url("img/piggy-bank.svg");
-  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .pig.coin {
   background-image: url("img/sukces.svg");
+  background-repeat: no-repeat;
 }
 
 .explosion {
   background-image: url("img/explosion.svg");
+  background-repeat: no-repeat;
+}
+
+.pig {
+  background-image: url("img/piggy-bank.svg");
+  background-repeat: no-repeat;
 }
 
 .no-item {
   background: none;
 }
 
+#gameover {
+  display: none;
+}
+
+.gameover{
+  position: absolute;
+  width: 100%;
+  height: 85vh;
+}
+
+.bravo {
+  font-size: 8rem;
+  color: black;
+  padding-top: 75px;
+  z-index: 1;
+  font-family: 'Mystery Quest', cursive;
+}
+
+.points {
+  font-size: 5rem;
+  color: black;
+  z-index: 1;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+.pig_div{
+  z-index: 1;
+}
+
+.pig_img{
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+.again{
+  z-index: 1;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: 'Shadows Into Light Two', cursive;
+  cursor: pointer;
+  color: black;
+}
 
 @media screen and (max-width: 768px) {
 
@@ -483,10 +487,13 @@ table {
   .form-declaration {
     font-size: 1rem;
   }
+
+
 }
 @media screen and (max-width: 1250px) {
-.points {
-  font-size: 3.5rem;
+  .points {
+    font-size: 3.5rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -525,13 +532,11 @@ table {
 }
 
 @media screen and (max-width: 992px) {
-
   .pig_img{
-    margin-left: 70%;
-    width: 90%;
+    width: 65%;
   }
-  .again{
-    margin-top: 5%;
+  .again, .points{
+    font-size: 3rem;
   }
 }
 
