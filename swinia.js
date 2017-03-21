@@ -21,24 +21,24 @@ function start(e) {
     $('.nav-form').hide();
     $('#nav-game').show();
     $('.btn-zaj').hide();
-    $('.game').attr('id', 'game');
-    $('.game').show('slow', play);
+    $('.game').attr('id', 'game').show('slow', play);
+    $('.points').text('Liczba zdobytych punktów: ' + points);
 
+    $('html, body').animate({
+      scrollTop: $('#game').offset().top
+    }, 500);
   }
 }
 //NA KLIKNIĘCIE PRZYCISKU ZAPISZ MNIE PRZECHODZI DO ROZPOCZĘCIA GRY
 $('.form-horizontal').submit(start);
 
-
 function below(node) {
   return $(node).parent().next().find(':nth-child(' + ($(node).index() + 1) + ')');
 }
 
-
-
 function showPoints() {
   $('.points').text('Liczba zdobytych punktów: ' + points);
-  $('table tr:nth-child(1) td:nth-child(10)').text('PUNKTY: ' + points);
+  $('.points-counter').text('PUNKTY: ' + points);
 }
   // LICZNIK PUNKTÓW SKORELOWANE Z DZWIĘKIEM SUKCESU
 function addPoint() {
@@ -102,7 +102,7 @@ function setTimer() {
     }
 //CZYSZCZENIE INTERWAŁU I POJAWIENIE SIĘ GAMEOVER
     var out = "CZAS: 00:" + sec;
-    $('table tr:nth-child(1) td:nth-child(1)').addClass('counter').html(out);
+    $('.time-counter').html(out);
     if (count == 0) {
       clearInterval(coinsIntervalId);
       clearInterval(counter);
@@ -140,7 +140,7 @@ function play() {
     }
     // DODAJE ŚWINIĘ W WYZNACZONYM MIEJSCU ORAZ LICZNIK PUNKTÓW
     $('tr:last td', $table).addClass('no-item');
-    $('table tr:nth-child(1) td:nth-child(10)').addClass('pointer').text('PUNKTY: ' + points);
+    $('.points-counter').text('PUNKTY: ' + points);
     $('table tr:nth-child(9) td:nth-child(5)').addClass('pig'); //świnia ładuje się razem z grą
 
     setTimer();
