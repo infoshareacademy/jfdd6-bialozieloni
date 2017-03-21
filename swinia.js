@@ -82,6 +82,12 @@ $(document).keydown(function (e) {
         removePoint();
       }
       break;
+    case 38:
+      e.preventDefault();
+      break;
+    case 40:
+      e.preventDefault();
+      break;
     default:
       return; // exit this handler for other keys
   }
