@@ -437,6 +437,8 @@ table {
 
 #gameover {
   display: none;
+  background-color: white;
+  z-index: 1;
 }
 
 .gameover{
@@ -454,7 +456,7 @@ table {
 }
 
 .points {
-  font-size: 5rem;
+  font-size: 3rem;
   color: black;
   z-index: 1;
   font-family: 'Shadows Into Light Two', cursive;
@@ -466,12 +468,12 @@ table {
 
 .pig_img{
   margin: 0 auto;
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .again{
   z-index: 1;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: bold;
   font-family: 'Shadows Into Light Two', cursive;
   cursor: pointer;
@@ -489,11 +491,6 @@ table {
   }
 
 
-}
-@media screen and (max-width: 1250px) {
-  .points {
-    font-size: 3.5rem;
-  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -534,9 +531,6 @@ table {
 @media screen and (max-width: 992px) {
   .pig_img{
     width: 65%;
-  }
-  .again, .points{
-    font-size: 3rem;
   }
 }
 
